@@ -1,0 +1,37 @@
+{
+  "name": "react-boilerplate",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --hot --history-api-fallback --open"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "babel": {
+    "presets": [
+      [
+        "latest",
+        {
+          "es2015": {
+            "modules": false
+          }
+        }
+      ],
+      "react"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  }
+}
