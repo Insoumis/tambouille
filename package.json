@@ -2,7 +2,8 @@
   "name": "react-boilerplate",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback --open"
+    "start": "webpack-dev-server --hot --history-api-fallback --open",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^15.5.4",
@@ -10,10 +11,16 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
     "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
@@ -33,5 +40,28 @@
     "plugins": [
       "react-hot-loader/babel"
     ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "installedESLint": true,
+    "env": {
+      "browser": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "webpack.config.js",
+            "**/src/index.jsx"
+          ],
+          "optionalDependencies": false
+        }
+      ]
+    }
   }
 }
