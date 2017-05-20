@@ -18,6 +18,27 @@ module.exports = {
   module: {
     rules: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+            localIdentName: '[name]__[local]--[hash:base64:5]',
+            importLoaders: 1,
+          },
+        }, 'sass-loader'],
+      }, {
+        test: /\.s?css$/,
+        include: /node_modules/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+          },
+        }, 'sass-loader'],
+      },
     ],
   },
   plugins: [

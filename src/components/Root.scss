@@ -1,0 +1,39 @@
+:global {
+  :global {
+    .browserupgrade {
+      background: darkorange;
+      color: #fff;
+      padding: 10px 20px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      z-index: 99999999;
+
+      a {
+        color: darkmagenta;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus {outline: 0;}
+
+h1,
+h2,
+h3,
+p {margin: 0;}
+
+a {
+  text-decoration: none;
+
+  &:hover {text-decoration: underline;}
+}
