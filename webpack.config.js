@@ -38,6 +38,13 @@ module.exports = {
             importLoaders: 1,
           },
         }, 'sass-loader'],
+      }, {
+        test: /\.(jpe?g|gif|png|svg|eot|woff|ttf)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'assets/[name].[hash:8].[ext]',
+        },
       },
     ],
   },

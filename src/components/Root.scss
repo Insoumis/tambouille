@@ -1,18 +1,16 @@
 :global {
-  :global {
-    .browserupgrade {
-      background: darkorange;
-      color: #fff;
-      padding: 10px 20px;
-      position: relative;
-      text-align: center;
-      width: 100%;
-      z-index: 99999999;
+  .browserupgrade {
+    background: darkorange;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 99999999;
 
-      a {
-        color: darkmagenta;
-        text-decoration: underline;
-      }
+    a {
+      color: darkmagenta;
+      text-decoration: underline;
     }
   }
 }

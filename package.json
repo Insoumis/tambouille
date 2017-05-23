@@ -3,7 +3,12 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --hot --history-api-fallback --open",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "postbuild": "copyfiles index.html dist",
+    "deploy": "npm run build && gh-pages -d dist",
+    "pages": "gh-pages -d dist"
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
@@ -12,6 +17,7 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
@@ -19,16 +25,24 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "copyfiles": "^1.2.0",
+    "cross-env": "^5.0.0",
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "gh-pages": "^1.0.0",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.5",
     "react-hot-loader": "^3.0.0-beta.7",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
@@ -63,6 +77,7 @@
         {
           "devDependencies": [
             "webpack.config.js",
+            "webpack.config.prod.js",
             "**/src/index.jsx"
           ],
           "optionalDependencies": false
