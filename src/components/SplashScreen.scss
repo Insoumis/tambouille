@@ -1,0 +1,39 @@
+@import './assets/colors';
+
+.module {
+  background: lighten($dark, 10%);
+  display: table;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  button {
+    background: url('./assets/ico-down.svg') no-repeat center;
+    border: 0;
+    height: 60px;
+    margin-top: 30px;
+    text-indent: -9999px;
+    width: 60px;
+  }
+}
+
+.wrapper {
+  color: $light;
+  display: table-cell;
+  font-family: Domine, serif;
+  font-size: 2em;
+  line-height: 1.8em;
+  text-align: center;
+  vertical-align: middle;
+
+  img {width: 250px;}
+
+  h1 {
+    color: $light;
+    font-size: 2.2em;
+    line-height: 1.8em;
+    text-shadow: 5px 5px $dark;
+  }
+
+  p {font-size: 0.6em;}
+}

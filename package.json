@@ -11,10 +11,16 @@
     "pages": "gh-pages -d dist"
   },
   "dependencies": {
+    "firebase": "^4.0.0",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "reselect": "^3.0.1",
+    "smoothscroll": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
