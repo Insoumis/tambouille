@@ -37,7 +37,7 @@ const MainScreen = ({ items }) => (
           </Row>
         </Container>
 
-        <Route path="/tambouille/:id" component={Item} />
+        <Route path="/candidats/:id" component={Item} />
       </div>
     </div>
   </Router>

@@ -73,6 +73,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: '200.html',
       inject: true,
       template: path.resolve(__dirname, 'index.html'),
       minify: {
