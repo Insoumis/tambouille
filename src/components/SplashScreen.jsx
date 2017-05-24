@@ -14,10 +14,6 @@ class SplashScreen extends Component {
   };
 
   componentDidMount() {
-    if (this.props.location.pathname !== '/') {
-      this.scrollToMainScreen();
-    }
-
     window.addEventListener('scroll', () => window.requestAnimationFrame(() => {
       if (!this.isScrolling && window.pageYOffset < window.innerHeight) {
         this.scrollToMainScreen();

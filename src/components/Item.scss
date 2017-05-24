@@ -2,6 +2,7 @@
 
 .module {
   background: transparentize($light, .1);
+  cursor: pointer;
   min-height: 100%;
   padding: 90px 0 60px;
   position: absolute;
@@ -13,8 +14,11 @@
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    cursor: auto;
     padding: 40px;
   }
+
+  a {color: lighten($dark, 15%)}
 
   h3 {margin: 20px;}
 }

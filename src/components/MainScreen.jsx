@@ -8,8 +8,10 @@ import css from './MainScreen.scss';
 import ListItem from './ListItem';
 import Item from '../containers/Item';
 
+import config from '../../config';
+
 const MainScreen = ({ items }) => (
-  <Router>
+  <Router basename={config[process.env.NODE_ENV].basename}>
     <div id="mainScreen" className={css.module}>
       <header>
         <h1>La tambouille c&apos;est génial (logo)</h1>
