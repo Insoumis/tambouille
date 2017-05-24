@@ -1,7 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+
+const config = require('./config');
 
 module.exports = {
   devtool: 'source-map',
@@ -12,6 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
+    publicPath: config.production.basename,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -68,6 +72,22 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve(__dirname, 'index.html'),
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         // To get React production build

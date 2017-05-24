@@ -1,5 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const config = require('./config');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -9,8 +12,9 @@ module.exports = {
     './src/index',
   ],
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: config.development.basename,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -49,6 +53,16 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve(__dirname, 'index.html'),
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        // To get React production build
+        NODE_ENV: JSON.stringify('development'),
+      },
+    }),
     new webpack.NamedModulesPlugin(),
   ],
 };
