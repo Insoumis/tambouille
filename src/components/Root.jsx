@@ -1,16 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import 'normalize.css';
 import './Root.scss';
 
 import SplashScreen from './SplashScreen';
-import Tambouille from '../containers/Tambouille';
+import MainScreen from '../containers/MainScreen';
 
 const Root = () => (
-  <div>
-    <SplashScreen />
-    <Tambouille />
-  </div>
+  <Router>
+    <div>
+      <SplashScreen />
+      <MainScreen />
+    </div>
+  </Router>
 );
 
 export default Root;

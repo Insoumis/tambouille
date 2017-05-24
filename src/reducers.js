@@ -19,19 +19,21 @@ const allIds = (state = [], action) => {
   }
 };
 
-const tambouilles = combineReducers({
+const items = combineReducers({
   byId,
   allIds,
 });
 
 const app = combineReducers({
-  tambouilles,
+  items,
 });
 
 export default app;
 
 export const getAll = createSelector(
-  state => state.tambouilles.byId,
-  state => state.tambouilles.allIds,
+  state => state.items.byId,
+  state => state.items.allIds,
   (memById, memAllIds) => memAllIds.map(id => memById[id]),
 );
+
+export const getItem = (state, id) => state.items.byId[id];

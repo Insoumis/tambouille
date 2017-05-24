@@ -1,5 +1,5 @@
 {
-  "name": "react-boilerplate",
+  "name": "tambouille",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --hot --history-api-fallback --open",
@@ -16,7 +16,9 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-grid-system": "^2.9.1",
     "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "reselect": "^3.0.1",

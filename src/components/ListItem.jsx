@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import css from './ListItem.scss';
 
 const ListItem = ({ item }) => (
-  <li>
+  <Link className={css.module} to={`/tambouille/${item.id}`}>
     <article>
       <h3>{item.candidat_name}</h3>
       <p>{item.dep_num} - {item.dep_name} - circonscription n°{item.circo}</p>
     </article>
-  </li>
+  </Link>
 );
 
 ListItem.propTypes = {

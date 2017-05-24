@@ -1,0 +1,49 @@
+@import './assets/colors';
+
+.module {
+  min-height: 100vh;
+
+  header {
+
+    background: darken($dark, 10%);
+    border-bottom: 1px solid darken($dark, 15%);
+    border-top: 1px solid darken($dark, 15%);
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  h1 {
+    color: $light;
+    font-family: Domine, serif;
+    font-size: 18px;
+    height: 55px;
+    line-height: 55px;
+  }
+
+  nav {
+    background: $dark;
+    border-bottom: 1px solid darken($dark, 4%);
+    box-shadow: 0 2px 2px transparentize(black, .7);
+    color: $light;
+    height: 95px;
+    line-height: 95px;
+    position: relative;
+    text-align: center;
+    z-index: 100;
+  }
+}
+
+.content {
+  padding: 60px 0;
+  position: relative;
+
+  h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.4em;
+    margin-bottom: 30px;
+  }
+}

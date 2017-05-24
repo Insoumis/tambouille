@@ -1,23 +1,35 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import smoothscroll from 'smoothscroll';
 
 import css from './SplashScreen.scss';
 import discord from './assets/logo-discord.png';
 
 class SplashScreen extends Component {
+  static propTypes = {
+    location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
+    }).isRequired,
+  };
+
   componentDidMount() {
+    if (this.props.location.pathname !== '/') {
+      this.scrollToMainScreen();
+    }
+
     window.addEventListener('scroll', () => window.requestAnimationFrame(() => {
       if (!this.isScrolling && window.pageYOffset < window.innerHeight) {
-        this.scrollToTambouille();
+        this.scrollToMainScreen();
       }
 
       if (window.pageYOffset === 0) this.isScrolling = false;
     }));
   }
 
-  scrollToTambouille() {
+  scrollToMainScreen() {
     this.isScrolling = true;
-    smoothscroll(document.querySelector('#tambouille'));
+    smoothscroll(document.querySelector('#mainScreen'));
   }
 
   render() {
@@ -29,7 +41,7 @@ class SplashScreen extends Component {
           <h1>La TAMBOUILLE c&apos;est génial !</h1>
           <p>(à remplacer par une home top+)</p>
           <button
-            onClick={() => this.scrollToTambouille()}
+            onClick={() => this.scrollToMainScreen()}
           >Scrollez pour en voir plus</button>
         </div>
       </div>
@@ -37,4 +49,4 @@ class SplashScreen extends Component {
   }
 }
 
-export default SplashScreen;
+export default withRouter(SplashScreen);

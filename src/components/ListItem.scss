@@ -1,0 +1,18 @@
+@import './assets/colors';
+
+.module {
+  &:hover {
+    text-decoration: none;
+  }
+
+  article {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    color: $main;
+    height: 200px;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+}
