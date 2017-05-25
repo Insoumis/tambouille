@@ -5,36 +5,46 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import css from './Item.scss';
 
-const Item = ({ history, item }) => (
-  <div
-    className={css.module}
-    onClick={(e) => {
-      const container = findDOMNode(this.container);
-      if (
-        e.target !== e.currentTarget &&
-        e.target !== container &&
-        e.target !== container.children[0]
-      ) {
-        return;
-      }
+const Item = ({ history, item }) => {
+  const goBack = () => {
+    if (history.action === 'POP') {
+      history.push('/');
+    } else {
       history.goBack();
-    }}
-    role="button"
-    tabIndex="0"
-  >
-    <Container ref={node => (this.container = node)}>
-      <Row>
-        <Col md={8} offset={{ md: 2 }}>
-          <article>
-            <button onClick={() => history.goBack()}>Fermer</button>
-            <h3>{item.candidat_name}</h3>
-            {item.description}
-          </article>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-);
+    }
+  };
+
+  return (
+    <div
+      className={css.module}
+      onClick={(e) => {
+        const container = findDOMNode(this.container);
+        if (
+          e.target !== e.currentTarget &&
+          e.target !== container &&
+          e.target !== container.children[0]
+        ) {
+          return;
+        }
+        goBack();
+      }}
+      role="button"
+      tabIndex="0"
+    >
+      <Container ref={node => (this.container = node)}>
+        <Row>
+          <Col md={8} offset={{ md: 2 }}>
+            <article>
+              <button onClick={() => goBack()}>Fermer</button>
+              <h3>{item.candidat_name}</h3>
+              {item.description}
+            </article>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
 
 Item.propTypes = {
   history: PropTypes.shape({

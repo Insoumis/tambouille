@@ -15,7 +15,7 @@ const byCategory = (state = {}, action) => {
     case 'GET_SUCCESS':
       return Object.keys(action.payload).reduce((acc, val) => {
         const item = action.payload[val];
-        acc[item.category] = (acc[item.category]) ? acc[item.category] : [];
+        acc[item.category] = acc[item.category] || [];
         acc[item.category].push(item);
         return acc;
       }, {});
