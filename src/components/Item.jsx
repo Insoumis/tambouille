@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { Link } from 'react-router-dom';
 
 import css from './Item.scss';
 
@@ -18,7 +17,7 @@ const Item = ({ history, item }) => (
       ) {
         return;
       }
-      history.push('/');
+      history.goBack();
     }}
     role="button"
     tabIndex="0"
@@ -27,7 +26,7 @@ const Item = ({ history, item }) => (
       <Row>
         <Col md={8} offset={{ md: 2 }}>
           <article>
-            <Link to="/">Fermer</Link>
+            <button onClick={() => history.goBack()}>Fermer</button>
             <h3>{item.candidat_name}</h3>
             {item.description}
           </article>

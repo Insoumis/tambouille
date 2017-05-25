@@ -2,14 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getAll } from '../reducers';
-
 import View from '../components/MainScreen';
 
 class MainScreen extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    items: PropTypes.arrayOf(PropTypes.object).isRequired,
   }
 
   constructor(props) {
@@ -22,12 +19,8 @@ class MainScreen extends Component {
   }
 
   render() {
-    return <View items={this.props.items} />;
+    return <View />;
   }
 }
 
-const mapStateToProps = state => ({
-  items: getAll(state),
-});
-
-export default connect(mapStateToProps)(MainScreen);
+export default connect()(MainScreen);

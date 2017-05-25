@@ -18,7 +18,15 @@
     padding: 40px;
   }
 
-  a {color: lighten($dark, 15%)}
+  button {
+    background: $dark;
+    border: 0;
+    border-radius: 4px;
+    color: $light;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 4px 8px;
+  }
 
   h3 {margin: 20px;}
 }

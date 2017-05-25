@@ -1,50 +1,38 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Container, Row, Col } from 'react-grid-system';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 
 import css from './MainScreen.scss';
 
-import ListItem from './ListItem';
+import List from '../containers/List';
 import Item from '../containers/Item';
 
+import { filters } from '../reducers';
 import config from '../../config';
 
-const MainScreen = ({ items }) => (
+const MainScreen = () => (
   <Router basename={config[process.env.NODE_ENV].basename}>
     <div id="mainScreen" className={css.module}>
       <header>
         <h1>La tambouille c&apos;est génial (logo)</h1>
       </header>
       <nav>
-        Filtres
+        {Object.keys(filters).map(cat => (
+          <NavLink
+            activeClassName={css.active}
+            key={cat}
+            to={`/categories/${cat}`}
+          >{filters[cat].name}</NavLink>
+        ))}
       </nav>
       <div className={css.content}>
-        <Container>
-          <h2>Filtre en cours</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Architecto ad corrupti magni rerum enim, odit facere, dolores
-            sint reiciendis cumque dolorem a.
-            Voluptate adipisci veniam, in deleniti illo alias, voluptates.
-          </p>
-          <Row>
-            {items.map(item => (
-              <Col key={item.id} md={6} lg={4}>
-                <ListItem item={item} />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-
+        <Switch>
+          <Route path="/categories/:catId" component={List} />
+          <Route path="/" component={List} />
+        </Switch>
         <Route path="/candidats/:id" component={Item} />
       </div>
     </div>
   </Router>
 );
-
-MainScreen.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
 
 export default MainScreen;

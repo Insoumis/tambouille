@@ -24,12 +24,22 @@
     background: $dark;
     border-bottom: 1px solid darken($dark, 4%);
     box-shadow: 0 2px 2px transparentize(black, .7);
-    color: $light;
     height: 95px;
     line-height: 95px;
     position: relative;
     text-align: center;
     z-index: 100;
+
+    a {
+      color: $light;
+      border-right: 1px solid $light;
+      font-weight: 600;
+      padding: 0 8px;
+
+      &:last-child {border: 0;}
+
+      &.active {text-decoration: underline;}
+    }
   }
 }
 
