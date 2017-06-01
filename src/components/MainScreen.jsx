@@ -29,6 +29,7 @@ class MainScreen extends Component {
               <NavLink
                 activeClassName={css.active}
                 key={cat}
+                className={css[filters[cat].icon]}
                 onClick={this.scrollToMainScreen}
                 to={`/categories/${cat}`}
               >{filters[cat].name}</NavLink>
