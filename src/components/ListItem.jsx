@@ -16,12 +16,12 @@ const ListItem = ({ item }) => (
 
         // prev char is space or first char
         if ((i > 0 && letters[i - 1] === ' ') || i === 0) {
-            spanClasses.push(css.hasLeftPseudo)
+          spanClasses.push(css.hasLeftPseudo)
         }
 
         // next char is space or last char
         if ((i < letters.length - 1 && letters[i + 1] === ' ') || i === letters.length - 1) {
-            spanClasses.push(css.hasRightPseudo)
+          spanClasses.push(css.hasRightPseudo)
         }
 
         return <span className={spanClasses.join(' ')} key={i}>{letter}</span>

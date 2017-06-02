@@ -1,34 +1,74 @@
 @import './assets/colors';
 
 .module {
-  background: transparentize($light, .1);
+  background: transparentize(rgb(164, 223, 238), .1);
   cursor: pointer;
   min-height: 100%;
   padding: 90px 0 60px;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 
   article {
     animation: appear .3s;
+    display: flex;
     background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    box-shadow: 4px 4px 0 $darkblue;
     cursor: auto;
-    padding: 40px;
+    padding: 40px 0 20px 0;
   }
 
   button {
-    background: $dark;
+    background: $pink;
     border: 0;
-    border-radius: 4px;
     color: $light;
-    font-size: .9em;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: bold;
+    height: 35px;
     padding: 4px 8px;
+    position: absolute;
+    top: -19px;
+    right: -2px;
+
+    span {
+      position: relative;
+      top: -6px;
+    }
+  }
+}
+
+.badge {
+  background-color: $pink;
+  color: #fff;
+  padding: 3px 5px;
+  position: absolute;
+  top: 16px;
+  left: 86px;
+}
+
+.content {
+  h3 {
+    background-color: $darkblue;
+    display: inline-block;
+    color: $light;
+    font-size: 1.5em;
+    padding: 3px 5px;
   }
 
-  h3 {margin: 20px;}
+  p {
+    color: $darkblue;
+    padding: 20px;
+
+    a {
+      background-color: rgb(164, 223, 238);
+      color: #444;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 5px;
+      padding: 5px 10px;
+    }
+  }
 }
 
 @keyframes appear {
