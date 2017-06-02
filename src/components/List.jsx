@@ -20,7 +20,7 @@ const List = ({ category, items }) => (
     : false}
     <Row>
       {items.map(item => (
-        <Col key={item.id} md={6} lg={4}>
+        <Col key={item.id} md={6} lg={3}>
           <ListItem item={item} />
         </Col>
       ))}
