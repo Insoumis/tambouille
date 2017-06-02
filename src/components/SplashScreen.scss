@@ -10,6 +10,7 @@
   flex-direction: column;
   height: 75vh;
   position: relative;
+  min-height: 585px;
   width: 100%;
 }
 
@@ -61,11 +62,13 @@
   font-size: 0.9em;
   line-height: 1em;
   padding: 3px 8px;
-  transform: rotate(5deg);
+  transform: rotate(5deg) translateX(-50%);
   background: $pink;
   display: inline-block;
   color: white;
   text-transform: uppercase;
+  position: absolute;
+  top: 300px;
 }
 
 .tagline {
