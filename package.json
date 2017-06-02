@@ -21,7 +21,8 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "smoothscroll-polyfill": "^0.3.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

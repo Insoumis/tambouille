@@ -10,7 +10,35 @@ import { filters } from '../reducers';
 import config from '../../config';
 
 class MainScreen extends Component {
+  constructor(props) {
+    super(props);
+
+    this.scrollToContent = this.scrollToContent.bind(this);
+  }
+
+  scrollToContent() {
+    setTimeout(() => {
+      const bodyTop = document.body.getBoundingClientRect().top;
+      const top = document.getElementById('mainScreen').getBoundingClientRect().top;
+
+      window.scrollTo({ top: top - bodyTop, behavior: 'smooth' })
+    })
+  }
+
+  scrollToTitle() {
+    setTimeout(() => {
+      const bodyTop = document.body.getBoundingClientRect().top;
+      const top = document.querySelector('h1').getBoundingClientRect().top;
+
+      window.scrollTo({ top: top - bodyTop, behavior: 'smooth' })
+    })
+  }
+
   render() {
+    if (location.pathname.indexOf('/categories') === 0) {
+      this.scrollToTitle();
+    }
+
     return (
       <Router basename={config[process.env.NODE_ENV].basename}>
         <div className={css.module}>
@@ -26,6 +54,7 @@ class MainScreen extends Component {
                   key={cat}
                   className={css[filters[cat].icon]}
                   to={`/categories/${cat}`}
+                  onClick={this.scrollToContent}
                 >{
                   filters[cat].name.split('|').map((text, i) => (<span key={i}>{text}<br/></span>))
                 }</NavLink>
