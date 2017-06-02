@@ -71,6 +71,21 @@
   }
 }
 
+.imgContainer {
+  width: 120px;
+  height: 120px;
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes appear {
   0% {
     opacity: 0;

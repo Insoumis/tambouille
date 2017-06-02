@@ -41,7 +41,13 @@ const Item = ({ history, item }) => {
               <button onClick={() => goBack()}><span>&times;</span></button>
               <div>
                 <strong className={css.badge}>{item.dep_num} - {item.circo}</strong>
-                <LazyImage src={macron} height="120"/>
+                <div className={css.imgContainer}>
+                  <LazyImage
+                    src={`/assets/${item.circo}-${item.dep_num}.jpg`}
+                    alt={item.candidat_name}
+                    height="120"
+                  />
+                </div>
               </div>
               <div className={css.content}>
                 <h3>{item.candidat_name}</h3>
