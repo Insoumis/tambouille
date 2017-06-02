@@ -67,37 +67,37 @@ export const getItem = (state, id) => state.items.byId[id];
 
 export const filters = {
   1: {
-    name: 'Petits Cadeaux',
+    name: 'Petits|Cadeaux',
     description: 'Quand le PS laisse une circonscription à un copain EM ou quand EM laisse un circonscription aux copains PS et LR.',
     icon: 'ico_cadeau',
   },
   2: {
-    name: 'Double Face',
+    name: 'Double|Face',
     description: 'Les doubles investitures (candidats présents sur liste EM et PS).',
     icon: 'ico_double_face',
   },
   3: {
-    name: "L'alibi vert",
+    name: 'Alibi|Vert',
     description: 'La politique, c’est aussi l’art des multiples alliances et des trahisons déguisées. En effet, le Parti Socialiste, ne souhaitant pas se confronter à ses anciens camarades partis chez En Marche, a décidé de sceller un accord électorale avec Europe Ecologie Les Verts, leur cédant les cirsconscriptions dans lesquelles cet affrontement avec leurs  compères auraient pu avoir lieu.',
     icon: 'ico_alibi_vert',
   },
   4: {
-    name: 'Place Libre',
+    name: 'Place|Libre',
     description: 'Circonscriptions où le PS a abandonné l\'investiture au profit d’EM.',
     icon: 'ico_fauteuil',
   },
   5: {
-    name: 'Macron Lovers',
+    name: 'Macron|Compatible',
     description: 'Les candidats PS macron-compatibles.',
     icon: 'ico_macronlover',
   },
   6: {
-    name: 'Coup du Lapin',
+    name: 'Coup|De Bluff',
     description: 'Étude statistique sur la société civile EM.',
     icon: 'ico_lapin',
   },
   7: {
-    name: '100% Salades',
+    name: '100%|Salades',
     description: 'Candidats EM allant à l\'encontre de l\'engagement pris de ne pas investir de personnes ayant déjà fait 3 mandats parlementaires.',
     icon: 'ico_salade',
   },
