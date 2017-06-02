@@ -6,31 +6,34 @@
     white 0%,
     $lightblue 75%
   );
-  display: table;
-  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
   position: relative;
   width: 100%;
+}
 
-  button {
-    background: url('./assets/ico_cadeau.svg') no-repeat center;
-    background-size: contain;
-    border: 0;
-    height: 60px;
-    margin-top: 30px;
-    text-indent: -9999px;
-    width: 60px;
-  }
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(./assets/tambouille_logo_x1.png);
+  background-position: center 105px;
+  background-repeat: no-repeat;
+}
+
+.space {
+  flex: 1;
 }
 
 .wrapper {
   color: $darkblue;
-  display: table-cell;
   font-size: 2em;
   line-height: 1.8em;
+  padding-bottom: 50px;
   text-align: center;
-  vertical-align: middle;
-
-  img {width: 250px;}
 
   h1 {
     color: $darkblue;
@@ -55,7 +58,7 @@
 
 .welcome {
   margin-bottom: 1em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1em;
   padding: 3px 8px;
   transform: rotate(5deg);

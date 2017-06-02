@@ -14,6 +14,8 @@ class SplashScreen extends Component {
   render() {
     return (
       <div className={css.module}>
+        <div className={css.image}></div>
+        <div className={css.space}></div>
         <div className={css.wrapper}>
           <h3 className={css.welcome}>Bienvenue!</h3>
           <h1>Tambouille</h1>
