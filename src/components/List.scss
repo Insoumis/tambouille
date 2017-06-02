@@ -1,0 +1,27 @@
+@import './assets/colors';
+
+.header {
+  margin-bottom: 40px;
+
+  img {
+    position: absolute;
+    top: -50px;
+    left: 50px;
+  }
+
+  h2 {
+    font-size: 2.1em;
+    color: $pink;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: $pink;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+  }
+}
