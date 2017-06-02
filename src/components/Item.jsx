@@ -16,8 +16,6 @@ const Item = ({ history, item }) => {
     }
   };
 
-  console.log(item)
-
   return (
     <div
       className={css.module}
