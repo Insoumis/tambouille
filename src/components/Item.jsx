@@ -46,8 +46,13 @@ const Item = ({ history, item }) => {
               </div>
               <div className={css.content}>
                 <h3>{item.candidat_name}</h3>
+                {item.descriptionHTML ?
+                  <div dangerouslySetInnerHTML={{ __html: item.descriptionHTML }} />
+                :
+                  <p>{item.description}</p>
+                }
                 <p>
-                  {item.description}<br/>
+                  <br/>
                   <a target="_blank" href={item.source}>Source</a>
                 </p>
               </div>
