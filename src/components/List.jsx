@@ -14,7 +14,7 @@ const List = ({ category, items }) => (
     {(category) ?
       <div className={css.header}>
         <img src={macaronTalking} alt="Macaron Talking" width="230" height="228"></img>
-        <h2>{filters[category].name}</h2>
+        <h2>{filters[category].name.replace('|', ' ')}</h2>
         <p>{filters[category].description}</p>
       </div>
     : false}
