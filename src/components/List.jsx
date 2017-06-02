@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
+import LazyImage from './LazyImage';
 import ListItem from './ListItem';
 import { filters } from '../reducers';
 
@@ -13,7 +14,7 @@ const List = ({ category, items }) => (
   <Container>
     {(category) ?
       <div className={css.header}>
-        <img src={macaronTalking} alt="Macaron Talking" width="230" height="228"></img>
+        <LazyImage src={macaronTalking} alt="Macaron Talking" width="230" height="228"/>
         <h2>{filters[category].name.replace('|', ' ')}</h2>
         <p>{filters[category].description}</p>
       </div>

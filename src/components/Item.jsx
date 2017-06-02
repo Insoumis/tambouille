@@ -3,6 +3,7 @@ import { findDOMNode } from 'react-dom';
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
+import LazyImage from './LazyImage';
 import css from './Item.scss';
 
 import macron from './assets/macron.jpg';
@@ -40,7 +41,7 @@ const Item = ({ history, item }) => {
               <button onClick={() => goBack()}><span>&times;</span></button>
               <div>
                 <strong className={css.badge}>{item.dep_num} - {item.circo}</strong>
-                <img src={macron} height="120"/>
+                <LazyImage src={macron} height="120"/>
               </div>
               <div className={css.content}>
                 <h3>{item.candidat_name}</h3>
