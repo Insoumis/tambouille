@@ -1,5 +1,4 @@
 require('smoothscroll-polyfill').polyfill();
-console.log('called');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
