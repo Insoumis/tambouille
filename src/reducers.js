@@ -68,7 +68,7 @@ export const getItem = (state, id) => state.items.byId[id];
 export const filters = {
   1: {
     name: 'Petits Cadeaux',
-    description: 'Les circonscriptions cadeaux : quand le PS laisse une circonscription à un copain EM ou à l\'inverse quand EM laisse un circonscription aux copains PS et LR.',
+    description: 'Quand le PS laisse une circonscription à un copain EM ou quand EM laisse un circonscription aux copains PS et LR.',
     icon: 'ico_cadeau',
   },
   2: {
