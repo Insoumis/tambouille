@@ -4,9 +4,12 @@
   margin-bottom: 40px;
 
   img {
-    position: absolute;
-    top: -50px;
-    left: 50px;
+    float: left;
+    /* negative margin-top to really move box */
+    margin-top: -120px;
+    /* relative positionning to bring back our macaron down */
+    position: relative;
+    top: 60px;
   }
 
   h2 {
@@ -14,6 +17,8 @@
     color: $pink;
     text-align: center;
     text-transform: uppercase;
+    margin: 0 auto 10px auto;
+    max-width: 500px;
   }
 
   p {
