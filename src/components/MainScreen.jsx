@@ -54,7 +54,8 @@ class MainScreen extends Component {
   }
 
   render() {
-    const margin = 15
+    const padding = 30;
+    const margin = 15;
     const sizePerLink = 100;
 
     if (location.pathname.indexOf('/categories') === 0) {
@@ -71,33 +72,35 @@ class MainScreen extends Component {
                 <h2>Découvrez</h2>
                 <h2>nos tambouilles</h2>
               </header>
-              <div className={css.linkContainers}>
-                {Object.keys(filters).map(cat => (
-                  <NavLink
-                    activeClassName={css.active}
-                    key={cat}
-                    className={css[filters[cat].icon]}
-                    to={`/categories/${cat}`}
-                    onClick={this.scrollToContent}
-                  >{
-                    filters[cat].name.split('|').map((text, i) => (
-                      <span key={i}>{text}<br/></span>
-                  ))}</NavLink>
-                ))}
-                <Route path="/" render={() => {
-                  if (location.pathname.indexOf('/categories') === 0) {
-                    let index = location.pathname.slice('/categories/'.length);
-                    index = parseInt(index, 10) - 1;
+              <div className={css.linkContainersWrapper}>
+                <div className={css.linkContainers}>
+                  {Object.keys(filters).map(cat => (
+                    <NavLink
+                      activeClassName={css.active}
+                      key={cat}
+                      className={css[filters[cat].icon]}
+                      to={`/categories/${cat}`}
+                      onClick={this.scrollToContent}
+                    >{
+                      filters[cat].name.split('|').map((text, i) => (
+                        <span key={i}>{text}<br/></span>
+                    ))}</NavLink>
+                  ))}
+                  <Route path="/" render={() => {
+                    if (location.pathname.indexOf('/categories') === 0) {
+                      let index = location.pathname.slice('/categories/'.length);
+                      index = parseInt(index, 10) - 1;
 
-                    let left = ((margin + sizePerLink) * index) + (sizePerLink / 2);
+                      const left = padding + ((margin + sizePerLink) * index) + (sizePerLink / 2);
 
-                    const style = { transform: `translateX(${left}px)` };
+                      const style = { transform: `translateX(${left}px)` };
 
-                    return (<div className={css.arrow} style={style} ref={(arr) => this.arrow = arr}></div>);
-                  }
+                      return (<div className={css.arrow} style={style} ref={(arr) => this.arrow = arr}></div>);
+                    }
 
-                  return false;
-                }}/>
+                    return false;
+                  }}/>
+                </div>
               </div>
             </nav>
             <div className={css.content}>

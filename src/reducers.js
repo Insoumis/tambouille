@@ -92,8 +92,8 @@ export const filters = {
     catPicture: 'place.libre'
   },
   5: {
-    name: 'Macron|Compatibilité',
-    title: 'Macron-Compatibilité',
+    name: 'Macron|Compatible',
+    title: 'Macron-Compatible',
     description: "La politique, c’est avant tout savoir se planquer. C’est ainsi que certains candidats socialistes, passés maîtres dans l’art de la dissimulation, contribuent à la confusion générale en souhaitant soutenir un gouvernement dont le premier ministre est de droite. Après tout, en politique, l’important c’est d’être bien entouré.",
     icon: 'ico_macronlover',
     catPicture: 'macron.compatibilite'

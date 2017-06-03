@@ -58,3 +58,17 @@
     margin-top: 1em;
   }
 }
+
+@media (max-width: 768px) {
+  .module img {
+    width: 300px;
+  }
+
+  .module h1 {
+    font-size: 1.6em;
+  }
+
+  .module h2 {
+    font-size: 1.4em;
+  }
+}

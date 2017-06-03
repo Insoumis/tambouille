@@ -9,9 +9,10 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
     top: -30px;
-    transform: rotate(-3deg);
+    left: 50%;
+    transform: rotate(-3deg) translateX(-50%);
     max-width: 500px;
     margin: auto;
 
@@ -72,8 +73,15 @@
 .linkContainers {
   display: inline-flex;
   justify-content: center;
-  margin-top: -10px;
+  height: 100%;
+  align-items: center;
+  padding: 0 30px;
   position: relative;
+}
+
+.linkContainersWrapper {
+  overflow-x: auto;
+  height: 100%;
 }
 
 .ico_cadeau {
@@ -120,7 +128,7 @@ nav a.active {
 
 .arrow {
   position: absolute;
-  bottom: -62px;
+  bottom: 0;
   left: 0;
   transition: transform .1s ease;
 
@@ -147,5 +155,15 @@ nav a.active {
     border-bottom-color: #fff;
     border-width: 24px;
     margin-left: -24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 0;
+  }
+
+  .module header h2 {
+    font-size: 14px;
   }
 }
