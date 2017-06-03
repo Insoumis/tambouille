@@ -66,7 +66,8 @@ class MainScreen extends Component {
               <Route path="/categories/:catId" component={List} />
               <Route path="/" component={List} />
             </Switch>
-            <Route path="/candidats/:id" component={Item} />
+            <Route path="/categories/:catId/:id" component={Item} />
+            <Route path="/candidat/:id" component={Item} />
           </div>
         </div>
       </Router>

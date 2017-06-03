@@ -7,8 +7,13 @@ import css from './ListItem.scss';
 
 import macron from './assets/macron.jpg';
 
-const ListItem = ({ item }) => (
-  <Link className={css.module} to={`/candidats/${item.id}`}>
+const ListItem = ({ item, category }) => (
+  <Link
+    className={css.module}
+    to={category ?
+      `/categories/${category}/${item.id}` :
+      `/candidat/${item.id}`}
+  >
     <article>
       <div className={css.imgContainer}>
         <LazyImage

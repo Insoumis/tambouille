@@ -22,7 +22,7 @@ const List = ({ category, items }) => (
     <Row>
       {items.map(item => (
         <Col key={item.id} md={6} lg={3}>
-          <ListItem item={item} />
+          <ListItem item={item} category={category} />
         </Col>
       ))}
     </Row>
