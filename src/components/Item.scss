@@ -86,11 +86,23 @@
   a {
     margin-left: 20px;
     background-color: rgb(164, 223, 238);
-    color: #444;
+    // color: #444;
+    color: $darkblue;
     display: inline-block;
     text-shadow: white 1px 1px;
     margin-top: 5px;
-    padding: 5px 10px;
+    padding: 6px 10px;
+
+    &::before {
+      content: '';
+      width: .9em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: .2em;
+      background: url('./assets/ico_link_source.svg') no-repeat center;
+      background-size: contain;
+    }
   }
 }
 
