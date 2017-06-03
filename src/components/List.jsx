@@ -9,9 +9,9 @@ import { filters } from '../reducers';
 import css from './List.scss';
 
 const List = ({ category, items }) => {
-  const categoryTitle = filters[category].title ?
-            filters[category].title :
-            filters[category].name.replace('|', ' ')
+  const categoryTitle = category && (filters[category].title ?
+              filters[category].title :
+              filters[category].name.replace('|', ' '))
 
   return (
     <Container>
