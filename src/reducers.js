@@ -71,6 +71,7 @@ export const filters = {
     title: 'Les Petits Cadeaux',
     description: "La politique, c’est avant tout le partage et l’entraide entre camarades. C’est ainsi que le Parti Socialiste offre gracieusement des circonscriptions à ses amis de La République en marche, qui ne sont, d'ailleurs, pas en reste en proposant d’autres circonscriptions aux Républicains ou au Parti Socialiste. Après tout, en politique, l’important c’est de se serrer les coudes.",
     icon: 'ico_cadeau',
+    catPicture: 'petits.cadeaux'
   },
   2: {
     name: 'Double|Face',

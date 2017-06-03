@@ -6,15 +6,13 @@ import LazyImage from './LazyImage';
 import ListItem from './ListItem';
 import { filters } from '../reducers';
 
-import macaronTalking from './assets/macaronTalking.jpg';
-
 import css from './List.scss';
 
 const List = ({ category, items }) => (
   <Container>
     {(category) ?
       <div className={css.header}>
-        <LazyImage src={macaronTalking} alt="Macaron Talking" width="230" height="228"/>
+        <LazyImage src={`/assets/${filters[category].catPicture}.png`} alt="Macaron Talking" width="250" height="250"/>
         <div className={css.content}>
           <h2>{filters[category].title ?
           filters[category].title :
