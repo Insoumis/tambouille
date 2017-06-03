@@ -4,47 +4,96 @@
   min-height: 100vh;
 
   header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -30px;
+    transform: rotate(-3deg);
+    max-width: 500px;
+    margin: auto;
 
-    background: darken($dark, 10%);
-    border-bottom: 1px solid darken($dark, 15%);
-    border-top: 1px solid darken($dark, 15%);
-    padding: 0 10px;
-    text-align: center;
-  }
 
-  h1 {
-    color: $light;
-    font-family: Domine, serif;
-    font-size: 18px;
-    height: 55px;
-    line-height: 55px;
+    h2 {
+      font-weight: 700;
+      padding: 3px 8px;
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      background-color: $darkblue;
+
+      &:first-of-type {
+        padding-bottom: 0;
+        margin-bottom: -1px;
+      }
+    }
   }
 
   nav {
     background: $dark;
-    border-bottom: 1px solid darken($dark, 4%);
-    box-shadow: 0 2px 2px transparentize(black, .7);
-    height: 95px;
-    line-height: 95px;
+    height: calc(20vh + 20px);
     position: relative;
     text-align: center;
     z-index: 100;
 
     a {
       color: $light;
-      border-right: 1px solid $light;
       font-weight: 600;
-      padding: 0 8px;
+      height: 95px;
+      background-size: 90px;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
 
-      &:last-child {border: 0;}
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      span {
+        background-color: $darkblue;
+        padding: 0 3px;
+        position: relative;
+        top: 10px;
+      }
 
       &.active {text-decoration: underline;}
     }
   }
 }
 
+.linkContainers {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.ico_cadeau {
+  background: url('./assets/ico_cadeau.svg') no-repeat center;
+}
+.ico_double_face {
+  background: url('./assets/ico_double_face.svg') no-repeat center;
+}
+.ico_alibi_vert {
+  background: url('./assets/ico_alibi_vert.svg') no-repeat center;
+}
+.ico_fauteuil {
+  background: url('./assets/ico_fauteuil.svg') no-repeat center;
+}
+.ico_macronlover {
+  background: url('./assets/ico_macronlover.svg') no-repeat center;
+}
+.ico_lapin {
+  background: url('./assets/ico_lapin.svg') no-repeat center;
+}
+.ico_salade {
+  background: url('./assets/ico_salade.svg') no-repeat center;
+}
+
 .content {
-  padding: 60px 0;
+  padding: 100px 0;
   position: relative;
 
   h2 {
@@ -54,6 +103,5 @@
 
   p {
     line-height: 1.4em;
-    margin-bottom: 30px;
   }
 }

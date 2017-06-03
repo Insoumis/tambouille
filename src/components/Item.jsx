@@ -5,6 +5,8 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import css from './Item.scss';
 
+import macron from './assets/macron.jpg';
+
 const Item = ({ history, item }) => {
   const goBack = () => {
     if (history.action === 'POP') {
@@ -35,9 +37,23 @@ const Item = ({ history, item }) => {
         <Row>
           <Col md={8} offset={{ md: 2 }}>
             <article>
-              <button onClick={() => goBack()}>Fermer</button>
-              <h3>{item.candidat_name}</h3>
-              {item.description}
+              <button onClick={() => goBack()}><span>&times;</span></button>
+              <div>
+                <strong className={css.badge}>{item.dep_num} - {item.circo}</strong>
+                <img src={macron} height="120"/>
+              </div>
+              <div className={css.content}>
+                <h3>{item.candidat_name}</h3>
+                {item.descriptionHTML ?
+                  <div dangerouslySetInnerHTML={{ __html: item.descriptionHTML }} />
+                :
+                  <p>{item.description}</p>
+                }
+                <p>
+                  <br/>
+                  <a target="_blank" href={item.source}>Source</a>
+                </p>
+              </div>
             </article>
           </Col>
         </Row>

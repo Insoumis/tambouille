@@ -67,31 +67,38 @@ export const getItem = (state, id) => state.items.byId[id];
 
 export const filters = {
   1: {
-    name: 'Le petit cadeau',
-    description: 'Les circonscriptions cadeaux : quand le PS laisse une circonscription à un copain EM ou à l\'inverse quand EM laisse un circonscription aux copains PS et LR.',
+    name: 'Petits|Cadeaux',
+    description: 'Quand le PS laisse une circonscription à un copain EM ou quand EM laisse un circonscription aux copains PS et LR.',
+    icon: 'ico_cadeau',
   },
   2: {
-    name: 'Le don d\'ubiquité',
+    name: 'Double|Face',
     description: 'Les doubles investitures (candidats présents sur liste EM et PS).',
+    icon: 'ico_double_face',
   },
   3: {
-    name: 'Green washing',
-    description: 'Accord EELV permettant au PS de ne pas présenter de candidats face à des ex-copains PS devenu EM.',
+    name: 'Alibi|Vert',
+    description: 'La politique, c’est aussi l’art des multiples alliances et des trahisons déguisées. En effet, le Parti Socialiste, ne souhaitant pas se confronter à ses anciens camarades partis chez En Marche, a décidé de sceller un accord électorale avec Europe Ecologie Les Verts, leur cédant les cirsconscriptions dans lesquelles cet affrontement avec leurs  compères auraient pu avoir lieu.',
+    icon: 'ico_alibi_vert',
   },
   4: {
-    name: 'Les PS disparus',
+    name: 'Place|Libre',
     description: 'Circonscriptions où le PS a abandonné l\'investiture au profit d’EM.',
+    icon: 'ico_fauteuil',
   },
   5: {
-    name: 'Les PS en marche',
+    name: 'Macron|Compatible',
     description: 'Les candidats PS macron-compatibles.',
+    icon: 'ico_macronlover',
   },
   6: {
-    name: 'La "société civile"',
+    name: 'Coup|De Bluff',
     description: 'Étude statistique sur la société civile EM.',
+    icon: 'ico_lapin',
   },
   7: {
-    name: 'Les cumulards',
+    name: '100%|Salades',
     description: 'Candidats EM allant à l\'encontre de l\'engagement pris de ne pas investir de personnes ayant déjà fait 3 mandats parlementaires.',
+    icon: 'ico_salade',
   },
 };

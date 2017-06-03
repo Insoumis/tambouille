@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const config = require('./config');
@@ -63,11 +64,27 @@ module.exports = {
         }),
       }, {
         test: /\.(jpe?g|gif|png|svg|eot|woff|ttf)$/i,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'assets/[name].[hash:8].[ext]',
-        },
+        loaders: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: 'assets/[name].[hash:8].[ext]',
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              }
+            }
+          }
+        ]
       },
     ],
   },
@@ -77,6 +94,7 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, 'index.html'),
       minify: {
+        title: 'Tambouille électorale — Discord Insoumis',
         removeComments: true,
         collapseWhitespace: true,
         removeRedundantAttributes: true,
@@ -111,5 +129,13 @@ module.exports = {
       sourceMap: true,
     }),
     new ExtractTextPlugin('styles.css'),
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'tambouille',
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'service-worker.js',
+      minify: true,
+      navigateFallback: config.production.basename + 'index.html',
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+    }),
   ],
 };

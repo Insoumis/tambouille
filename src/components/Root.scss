@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Domine:700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,600');
-
 @import './assets/colors';
 
 :global {
@@ -33,14 +30,13 @@
 body {
   background: $light;
   color: $main;
-  font-family: Roboto, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 h1,
 h2,
 h3 {
   color: $dark;
-  font-family: Domine, serif;
   margin: 0;
 }
 
