@@ -5,6 +5,7 @@ import css from './MainScreen.scss';
 
 import List from '../containers/List';
 import Item from '../containers/Item';
+import SplashScreen from './SplashScreen';
 
 import { filters } from '../reducers';
 import config from '../../config';
@@ -62,47 +63,51 @@ class MainScreen extends Component {
 
     return (
       <Router basename={config[process.env.NODE_ENV].basename}>
-        <div className={css.module}>
-          <nav>
-            <header id="mainScreen">
-              <h2>Découvrez</h2>
-              <h2>nos tambouilles</h2>
-            </header>
-            <div className={css.linkContainers}>
-              {Object.keys(filters).map(cat => (
-                <NavLink
-                  activeClassName={css.active}
-                  key={cat}
-                  className={css[filters[cat].icon]}
-                  to={`/categories/${cat}`}
-                  onClick={this.scrollToContent}
-                >{
-                  filters[cat].name.split('|').map((text, i) => (<span key={i}>{text}<br/></span>))
-                }</NavLink>
-              ))}
-              <Route path="/" render={() => {
-                if (location.pathname.indexOf('/categories') === 0) {
-                  let index = location.pathname.slice('/categories/'.length);
-                  index = parseInt(index, 10) - 1;
+        <div>
+          <SplashScreen />
+          <div className={css.module}>
+            <nav>
+              <header id="mainScreen">
+                <h2>Découvrez</h2>
+                <h2>nos tambouilles</h2>
+              </header>
+              <div className={css.linkContainers}>
+                {Object.keys(filters).map(cat => (
+                  <NavLink
+                    activeClassName={css.active}
+                    key={cat}
+                    className={css[filters[cat].icon]}
+                    to={`/categories/${cat}`}
+                    onClick={this.scrollToContent}
+                  >{
+                    filters[cat].name.split('|').map((text, i) => (
+                      <span key={i}>{text}<br/></span>
+                  ))}</NavLink>
+                ))}
+                <Route path="/" render={() => {
+                  if (location.pathname.indexOf('/categories') === 0) {
+                    let index = location.pathname.slice('/categories/'.length);
+                    index = parseInt(index, 10) - 1;
 
-                  let left = ((margin + sizePerLink) * index) + (sizePerLink / 2);
+                    let left = ((margin + sizePerLink) * index) + (sizePerLink / 2);
 
-                  const style = { transform: `translateX(${left}px)` };
+                    const style = { transform: `translateX(${left}px)` };
 
-                  return (<div className={css.arrow} style={style} ref={(arr) => this.arrow = arr}></div>);
-                }
+                    return (<div className={css.arrow} style={style} ref={(arr) => this.arrow = arr}></div>);
+                  }
 
-                return false;
-              }}/>
+                  return false;
+                }}/>
+              </div>
+            </nav>
+            <div className={css.content}>
+              <Switch>
+                <Route path="/categories/:catId" component={List} />
+                <Route exact path="/" component={List} />
+              </Switch>
+              <Route path="/categories/:catId/:id" component={Item} />
+              <Route path="/candidat/:id" component={Item} />
             </div>
-          </nav>
-          <div className={css.content}>
-            <Switch>
-              <Route path="/categories/:catId" component={List} />
-              <Route path="/" component={List} />
-            </Switch>
-            <Route path="/categories/:catId/:id" component={Item} />
-            <Route path="/candidat/:id" component={Item} />
           </div>
         </div>
       </Router>
