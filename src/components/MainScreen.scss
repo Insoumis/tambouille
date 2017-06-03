@@ -31,7 +31,7 @@
 
   nav {
     background: $dark;
-    height: calc(20vh + 20px);
+    height: 200px;
     position: relative;
     text-align: center;
     z-index: 100;
@@ -119,7 +119,7 @@ nav a.active {
 
 .arrow {
   position: absolute;
-  bottom: -67px;
+  bottom: -62px;
   left: 50%;
   transform: translateX(-50%);
   transition: left .1s ease;
