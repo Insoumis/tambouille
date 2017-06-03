@@ -87,9 +87,9 @@ class MainScreen extends Component {
 
                   let left = ((margin + sizePerLink) * index) + (sizePerLink / 2);
 
-                  left = { left: `${left}px` };
+                  const style = { transform: `translateX(${left}px)` };
 
-                  return (<div className={css.arrow} style={left} ref={(arr) => this.arrow = arr}></div>);
+                  return (<div className={css.arrow} style={style} ref={(arr) => this.arrow = arr}></div>);
                 }
 
                 return false;

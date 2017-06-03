@@ -120,9 +120,8 @@ nav a.active {
 .arrow {
   position: absolute;
   bottom: -62px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: left .1s ease;
+  left: 0;
+  transition: transform .1s ease;
 
   &:after, &:before {
     bottom: 100%;
