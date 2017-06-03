@@ -24,38 +24,8 @@
     h3 {
       display: inline;
       color: #fff;
-
-      span {
-        background-color: $darkblue;
-        position: relative;
-        z-index: 2;
-      }
+      background-color: $darkblue;
+      box-shadow: 5px 0 0 $darkblue, -5px 0 0 $darkblue;
     }
-  }
-}
-
-.hasRightPseudo {
-  &:after {
-    background-color: $darkblue;
-    content: ' ';
-    position: absolute;
-    height: 100%;
-    width: 5px;
-    right: -5px;
-    top: 0;
-    z-index: 1;
-  }
-}
-
-.hasLeftPseudo {
-  &:before {
-    background-color: $darkblue;
-    content: ' ';
-    position: absolute;
-    height: 100%;
-    width: 5px;
-    left: -5px;
-    top: 0;
-    z-index: 1;
   }
 }
