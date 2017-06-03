@@ -69,9 +69,10 @@
 }
 
 .linkContainers {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   margin-top: -10px;
+  position: relative;
 }
 
 .ico_cadeau {
@@ -118,7 +119,7 @@ nav a.active {
 
 .arrow {
   position: absolute;
-  bottom: 0;
+  bottom: -45px;
   left: 50%;
   transform: translateX(-50%);
   transition: left .1s ease;

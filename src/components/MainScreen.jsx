@@ -45,6 +45,8 @@ class MainScreen extends Component {
       return;
     }
 
+    const index = [].indexOf.call($active.parentElement.children, $active);
+
     this.arrow.style.display = 'block';
 
     const fullLeft = $active.getBoundingClientRect().left + ($active.getBoundingClientRect().width / 2)
@@ -77,8 +79,8 @@ class MainScreen extends Component {
                   filters[cat].name.split('|').map((text, i) => (<span key={i}>{text}<br/></span>))
                 }</NavLink>
               ))}
+              <div className={css.arrow} ref={(arr) => this.arrow = arr}></div>
             </div>
-            <div className={css.arrow} ref={(arr) => this.arrow = arr}></div>
           </nav>
           <div className={css.content}>
             <Switch>
