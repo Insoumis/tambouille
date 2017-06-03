@@ -121,7 +121,7 @@ nav a.active {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
+  transition: left .1s ease;
 
   &:after, &:before {
     bottom: 100%;
