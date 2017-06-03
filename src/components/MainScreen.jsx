@@ -21,8 +21,6 @@ class MainScreen extends Component {
       const bodyTop = document.body.getBoundingClientRect().top;
       const top = document.getElementById('mainScreen').getBoundingClientRect().top;
 
-      this.moveArrow(this.$header)
-
       window.scrollTo({ top: top - bodyTop, behavior: 'smooth' })
     })
   }
@@ -47,8 +45,6 @@ class MainScreen extends Component {
 
     const $parent = $active.parentElement;
     const index = [].indexOf.call($parent.children, $active);
-    const margin = 15
-    const sizePerLink = 100;
 
     const fullLeft = ((margin + sizePerLink) * index) + (sizePerLink / 2);
 
@@ -57,6 +53,9 @@ class MainScreen extends Component {
   }
 
   render() {
+    const margin = 15
+    const sizePerLink = 100;
+
     if (location.pathname.indexOf('/categories') === 0) {
       this.scrollToTitle();
     }
@@ -64,7 +63,7 @@ class MainScreen extends Component {
     return (
       <Router basename={config[process.env.NODE_ENV].basename}>
         <div className={css.module}>
-          <nav ref={(el) => this.moveArrow(el)}>
+          <nav>
             <header id="mainScreen">
               <h2>Découvrez</h2>
               <h2>nos tambouilles</h2>
@@ -81,7 +80,20 @@ class MainScreen extends Component {
                   filters[cat].name.split('|').map((text, i) => (<span key={i}>{text}<br/></span>))
                 }</NavLink>
               ))}
-              <div className={css.arrow} ref={(arr) => this.arrow = arr}></div>
+              <Route path="/" render={() => {
+                if (location.pathname.indexOf('/categories') === 0) {
+                  let index = location.pathname.slice('/categories/'.length);
+                  index = parseInt(index, 10) - 1;
+
+                  let left = ((margin + sizePerLink) * index) + (sizePerLink / 2);
+
+                  left = { left: `${left}px` };
+
+                  return (<div className={css.arrow} style={left} ref={(arr) => this.arrow = arr}></div>);
+                }
+
+                return false;
+              }}/>
             </div>
           </nav>
           <div className={css.content}>
