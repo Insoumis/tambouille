@@ -45,12 +45,14 @@ class MainScreen extends Component {
       return;
     }
 
-    const index = [].indexOf.call($active.parentElement.children, $active);
+    const $parent = $active.parentElement;
+    const index = [].indexOf.call($parent.children, $active);
+    const margin = 15
+    const sizePerLink = 100;
+
+    const fullLeft = ((margin + sizePerLink) * index) + (sizePerLink / 2);
 
     this.arrow.style.display = 'block';
-
-    const fullLeft = $active.getBoundingClientRect().left + ($active.getBoundingClientRect().width / 2)
-
     this.arrow.style.left = `${fullLeft}px`;
   }
 
