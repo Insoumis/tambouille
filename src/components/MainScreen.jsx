@@ -60,6 +60,7 @@ class MainScreen extends Component {
                 }</NavLink>
               ))}
             </div>
+            <div className={css.arrow}></div>
           </nav>
           <div className={css.content}>
             <Switch>
