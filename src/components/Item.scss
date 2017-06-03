@@ -142,6 +142,10 @@
 }
 
 @media (max-width: 768px) {
+  .module {
+    padding: 10px 0 60px;
+  }
+
   .module article {
     flex-direction: column;
   }
