@@ -25,19 +25,11 @@
     font-size: 2em;
     line-height: 1em;
   }
+
   h2 {
     color: $darkblue;
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 400;
-  }
-
-  p {
-    display: inline-block;
-    font-size: 0.6em;
-    color: $pink;
-    max-width: 16em;
-    line-height: 1.4em;
-    font-weight: 500;
   }
 
   h3 {
@@ -51,6 +43,15 @@
     color: white;
     margin-top: -1.5em;
     text-transform: uppercase;
+  }
+
+  p {
+    display: inline-block;
+    font-size: 0.6em;
+    color: $pink;
+    max-width: 16em;
+    line-height: 1.4em;
+    font-weight: 500;
   }
 
   p {

@@ -20,7 +20,7 @@ class SplashScreen extends Component {
         <NavLink to="/">
           <LazyImage src={logo} alt="Logo Tambouille" />
         </NavLink>
-        <h3>Bienvenue</h3>
+        <h3>Bienvenue!</h3>
         <h1>Tambouille</h1>
         <h2>électorale</h2>
         <p>vieilles recettes politiciennes pour une nouvelle majorité</p>
