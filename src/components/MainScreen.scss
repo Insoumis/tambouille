@@ -52,6 +52,12 @@
         margin-right: 15px;
       }
 
+      &:hover {
+        text-decoration: none;
+
+        span { background-color: $pink; }
+      }
+
       span {
         background-color: $darkblue;
         padding: 0 3px;
