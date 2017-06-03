@@ -1,7 +1,6 @@
 @import './assets/colors';
 
 .module {
-  background: transparentize(rgb(164, 223, 238), .1);
   cursor: pointer;
   min-height: 100%;
   padding: 90px 0 60px;
@@ -11,15 +10,15 @@
   z-index: 1000;
 
   article {
-    animation: appear .3s;
     display: flex;
     background: #fff;
     box-shadow: 4px 4px 0 $darkblue;
     cursor: auto;
-    padding: 40px 0 20px 0;
+    padding: 20px 0 20px 0;
   }
 
   button {
+    z-index: 1;
     background: $pink;
     border: 0;
     color: $light;
@@ -27,9 +26,8 @@
     font-weight: bold;
     height: 35px;
     padding: 4px 8px;
-    position: absolute;
-    top: -19px;
-    right: -2px;
+    margin-bottom: -25px;
+    margin-right: 20px;
 
     span {
       position: relative;
@@ -38,13 +36,30 @@
   }
 }
 
-.badge {
-  background-color: $pink;
-  color: #fff;
-  padding: 3px 5px;
+.modal {
+  animation: appear .3s;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+
+.background {
+  background: transparentize(rgb(164, 223, 238), .1);
   position: absolute;
-  top: 16px;
-  left: 86px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: fadein .3s;
+}
+
+.badge {
+  strong {
+    background-color: $pink;
+    color: #fff;
+    padding: 4px 6px;
+    display: inline-block;
+  }
 }
 
 .content {
@@ -58,20 +73,29 @@
 
   p {
     color: $darkblue;
-    padding: 20px;
+    padding: 10px 20px 10px;
 
-    a {
-      background-color: rgb(164, 223, 238);
-      color: #444;
-      display: inline-block;
-      font-weight: bold;
-      margin-top: 5px;
-      padding: 5px 10px;
+    &:first-of-type {
+      padding-top: 20px
     }
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
+  }
+
+  a {
+    margin-left: 20px;
+    background-color: rgb(164, 223, 238);
+    color: #444;
+    display: inline-block;
+    text-shadow: white 1px 1px;
+    margin-top: 5px;
+    padding: 5px 10px;
   }
 }
 
 .imgContainer {
+  margin-top: 26.4px;
   width: 120px;
   height: 120px;
 
@@ -94,5 +118,14 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

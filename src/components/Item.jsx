@@ -34,13 +34,13 @@ const Item = ({ history, item }) => {
       role="button"
       tabIndex="0"
     >
+      <div className={css.background} />
       <Container ref={node => (this.container = node)}>
         <Row>
           <Col md={8} offset={{ md: 2 }}>
-            <article>
+            <div className={css.modal}>
               <button onClick={() => goBack()}><span>&times;</span></button>
-              <div>
-                <strong className={css.badge}>{item.dep_num} - {item.circo}</strong>
+              <article>
                 <div className={css.imgContainer}>
                   <LazyImage
                     src={`/assets/${item.circo}-${item.dep_num}.jpg`}
@@ -48,20 +48,20 @@ const Item = ({ history, item }) => {
                     height="120"
                   />
                 </div>
-              </div>
-              <div className={css.content}>
-                <h3>{item.candidat_name}</h3>
-                {item.descriptionHTML ?
-                  <div dangerouslySetInnerHTML={{ __html: item.descriptionHTML }} />
-                :
-                  <p>{item.description}</p>
-                }
-                <p>
-                  <br/>
+                <div className={css.content}>
+                  <div className={css.badge}>
+                      <strong>Dpt {item.dep_num} - Circo {item.circo}</strong>
+                  </div>
+                  <h3>{item.candidat_name}</h3>
+                  {item.descriptionHTML ?
+                    <div dangerouslySetInnerHTML={{ __html: item.descriptionHTML }} />
+                  :
+                    <p>{item.description}</p>
+                  }
                   <a target="_blank" href={item.source}>Source</a>
-                </p>
-              </div>
-            </article>
+                </div>
+              </article>
+            </div>
           </Col>
         </Row>
       </Container>
