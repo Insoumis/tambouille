@@ -21,7 +21,6 @@ class MainScreen extends Component {
       const bodyTop = document.body.getBoundingClientRect().top;
       const top = document.getElementById('mainScreen').getBoundingClientRect().top;
 
-      console.log('HERE ?');
       this.moveArrow(this.$header)
 
       window.scrollTo({ top: top - bodyTop, behavior: 'smooth' })
@@ -41,11 +40,16 @@ class MainScreen extends Component {
     this.$header = el;
 
     const $active = el.querySelector(`.${css.active}`);
+    if (!$active) {
+      this.arrow.style.display = 'none';
+      return;
+    }
+
+    this.arrow.style.display = 'block';
 
     const fullLeft = $active.getBoundingClientRect().left + ($active.getBoundingClientRect().width / 2)
 
     this.arrow.style.left = `${fullLeft}px`;
-    console.log();
   }
 
   render() {
