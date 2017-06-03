@@ -94,7 +94,7 @@ export const filters = {
   6: {
     name: 'Coup|De Bluff',
     description: 'Étude statistique sur la société civile EM.',
-    icon: 'ico_lapin',
+    icon: 'ico_bluff',
   },
   7: {
     name: '100%|Salades',
