@@ -45,10 +45,14 @@ class MainScreen extends Component {
       return;
     }
 
+    const $parent = $active.parentElement;
+    const index = [].indexOf.call($parent.children, $active);
+    const margin = 15
+    const sizePerLink = 100;
+
+    const fullLeft = ((margin + sizePerLink) * index) + (sizePerLink / 2);
+
     this.arrow.style.display = 'block';
-
-    const fullLeft = $active.getBoundingClientRect().left + ($active.getBoundingClientRect().width / 2)
-
     this.arrow.style.left = `${fullLeft}px`;
   }
 
@@ -77,8 +81,8 @@ class MainScreen extends Component {
                   filters[cat].name.split('|').map((text, i) => (<span key={i}>{text}<br/></span>))
                 }</NavLink>
               ))}
+              <div className={css.arrow} ref={(arr) => this.arrow = arr}></div>
             </div>
-            <div className={css.arrow} ref={(arr) => this.arrow = arr}></div>
           </nav>
           <div className={css.content}>
             <Switch>
