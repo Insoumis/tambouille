@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer');
 const config = require('./config');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: false,
   entry: [
     'babel-polyfill',
     './src/index',
