@@ -1,21 +1,16 @@
 @import './assets/colors';
 
 .header {
+  display: flex;
   margin-bottom: 40px;
+  align-items: center;
+}
 
-  img {
-    float: left;
-    /* negative margin-top to really move box */
-    margin-top: -120px;
-    /* relative positionning to bring back our macaron down */
-    position: relative;
-    top: 60px;
-  }
+.content {
 
   h2 {
     font-size: 2.1em;
     color: $pink;
-    text-align: center;
     text-transform: uppercase;
     margin: 0 auto 10px auto;
     max-width: 500px;
@@ -24,9 +19,8 @@
   p {
     font-size: 1.2em;
     font-weight: 500;
-    color: $pink;
+    color: $darkblue;
     margin: 0 auto;
     max-width: 500px;
-    text-align: center;
   }
 }

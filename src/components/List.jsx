@@ -15,11 +15,12 @@ const List = ({ category, items }) => (
     {(category) ?
       <div className={css.header}>
         <LazyImage src={macaronTalking} alt="Macaron Talking" width="230" height="228"/>
-        <h2>{filters[category].title ?
+        <div className={css.content}>
+          <h2>{filters[category].title ?
           filters[category].title :
-          filters[category].name.replace('|', ' ')
-        }</h2>
-        <p>{filters[category].description}</p>
+          filters[category].name.replace('|', ' ')}</h2>
+          <p>{filters[category].description}</p>
+        </div>
       </div>
     : false}
     <Row>
