@@ -106,7 +106,7 @@ class MainScreen extends Component {
             <div className={css.content}>
               <Switch>
                 <Route path="/categories/:catId" component={List} />
-                <Route exact path="/" component={List} />
+                <Route path="/" component={List} />
               </Switch>
               <Route path="/categories/:catId/:id" component={Item} />
               <Route path="/candidat/:id" component={Item} />
