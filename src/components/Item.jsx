@@ -34,7 +34,7 @@ const Item = ({ history, item }) => {
       role="button"
       tabIndex="0"
     >
-      <div className={css.background} />
+      <div className={css.background} onClick={() => goBack()}/>
       <Container ref={node => (this.container = node)}>
         <Row>
           <Col md={8} offset={{ md: 2 }}>
