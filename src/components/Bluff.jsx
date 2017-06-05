@@ -8,8 +8,12 @@ import image2 from './assets/bluff_illu_2.png';
 const Bluff = () => (
   <div className={css.module}>
     <div className={css.images}>
-      <img src={image1} alt="Infographie du Bluff n°1" />
-      <img src={image2} alt="Infographie du Bluff n°2" />
+      <div>
+        <img src={image1} alt="Infographie du Bluff n°1" />
+      </div>
+      <div>
+        <img src={image2} alt="Infographie du Bluff n°2" />
+      </div>
     </div>
     <article>
       <p>Le 11 mai 2017, Richard Ferrand a présenté une première liste de 428 candidats estampillés La République en marche et a annoncé qu’ils investissaient 52% de candidats issus de la société civile.</p>
