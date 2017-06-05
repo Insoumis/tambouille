@@ -34,6 +34,15 @@
       top: -6px;
     }
   }
+
+  &.remove {
+    .modal {
+      animation: disappear .25s;
+    }
+    .background {
+      animation: fadeout .25s;
+    }
+  }
 }
 
 .modal {
@@ -41,10 +50,6 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-}
-
-.modalClose {
-  animation: disappear .25s;
 }
 
 .background {
@@ -55,10 +60,6 @@
   top: 0;
   left: 0;
   animation: fadein .3s;
-}
-
-.backgroundFadeout {
-  animation: fadeout .25s;
 }
 
 .badge {
