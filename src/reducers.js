@@ -108,7 +108,7 @@ export const filters = {
     name: 'Coup|De Bluff',
     description: "À l'image de l'actualité politique, ce site sera mis à jour. Revenez prochainement afin de  découvrir de nouvelles tambouilles politiques dignes de la Ve République.",
     icon: 'ico_bluff',
-    catPicture: 'coup.bluff'
+    catPicture: 'home'
   },
   // TODO: remove or replace current n.7 with this
   /*7: {
