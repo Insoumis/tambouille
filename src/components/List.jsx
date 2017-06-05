@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-grid-system';
 
 import LazyImage from './LazyImage';
 import ListItem from './ListItem';
+import Bluff from './Bluff';
 import { filters } from '../reducers';
 
 import css from './List.scss';
@@ -31,6 +32,7 @@ const List = ({ category, items }) => {
           </Col>
         ))}
       </Row>
+      {category === "7" && <Bluff />}
     </Container>
   );
 }

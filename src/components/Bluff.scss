@@ -1,0 +1,14 @@
+.module {
+  margin: auto;
+}
+
+.images {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-bottom: 1em;
+
+  img {
+    max-width: 46%;
+  }
+}
