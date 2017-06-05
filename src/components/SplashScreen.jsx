@@ -9,7 +9,7 @@ import logo from './assets/tambouille_logo_x1.png';
 const SplashScreen = () => (
   <div className={css.module}>
     <Link to="/">
-      <LazyImage src={logo} alt="Logo Tambouille" />
+      <img src={logo} alt="Logo Tambouille" />
     </Link>
     <h3>Bienvenue!</h3>
     <h1>Tambouille</h1>
