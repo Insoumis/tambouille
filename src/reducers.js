@@ -106,9 +106,9 @@ export const filters = {
   },
   7: {
     name: 'Coup|De Bluff',
-    description: "À l'image de l'actualité politique, ce site sera mis à jour. Revenez prochainement afin de  découvrir de nouvelles tambouilles politiques dignes de la Ve République.",
+    description: "La politique, c’est avant tout un numéro de prestidigitation. Annoncer que l’on va présenter une majorité de candidats issus de la société civile, comme La République en marche, avant d’ajouter tous les élus MoDem. Ou encore, y placer des maires, des conseillers de cabinets ministériels… Après tout, en politique, l’important c’est de savoir faire illusion.",
     icon: 'ico_bluff',
-    catPicture: 'home'
+    catPicture: 'coup.bluff'
   },
   // TODO: remove or replace current n.7 with this
   /*7: {
