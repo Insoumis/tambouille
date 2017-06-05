@@ -9,23 +9,34 @@ import css from './Item.scss';
 import macron from './assets/macron.jpg';
 
 const Item = ({ history, item }) => {
-  const goBack = () => {
+  let container;
+  let background;
+  let modal;
+
+  const onModalClosed = () => {
     if (history.action === 'POP') {
       history.push('/');
     } else {
       history.goBack();
     }
+  }
+
+  const goBack = () => {
+    modal.addEventListener('animationend', onModalClosed, false);
+
+    background.classList.add(css.backgroundFadeout);
+    modal.classList.add(css.modalClose);
   };
 
   return (
     <div
       className={css.module}
       onClick={(e) => {
-        const container = findDOMNode(this.container);
+        const containerEl = findDOMNode(container);
         if (
           e.target !== e.currentTarget &&
-          e.target !== container &&
-          e.target !== container.children[0]
+          e.target !== containerEl &&
+          e.target !== containerEl.children[0]
         ) {
           return;
         }
@@ -34,11 +45,15 @@ const Item = ({ history, item }) => {
       role="button"
       tabIndex="0"
     >
-      <div className={css.background} onClick={() => goBack()}/>
-      <Container ref={node => (this.container = node)}>
+      <div
+        className={css.background}
+        onClick={goBack}
+        ref={node => background = node}
+      />
+      <Container ref={node => container = node}>
         <Row>
           <Col md={8} offset={{ md: 2 }}>
-            <div className={css.modal}>
+            <div className={css.modal} ref={node => modal = node}>
               <button onClick={() => goBack()}><span>&times;</span></button>
               <article>
                 <div className={css.imgContainer}>
