@@ -92,6 +92,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: '200.html',
       inject: true,
+      hash: true,
       template: path.resolve(__dirname, 'index.html'),
       minify: {
         title: 'Tambouille électorale — Discord Insoumis',
