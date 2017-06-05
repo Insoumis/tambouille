@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LazyImage from './LazyImage';
 import css from './ListItem.scss';
 
-import macron from './assets/macron.jpg';
+import failover from './assets/placeholder.jpg';
 
 const ListItem = ({ item, category }) => (
   <Link
@@ -18,6 +18,7 @@ const ListItem = ({ item, category }) => (
       <div className={css.imgContainer}>
         <LazyImage
           src={`/assets/${item.circo}-${item.dep_num}.jpg`}
+          failover={failover}
           alt={item.candidat_name}
           height="170"
         />

@@ -11,16 +11,19 @@ export default class LazyImage extends React.Component {
 
   componentDidMount() {
     const img = new Image();
+
     img.onload = () => {
       this.setState({
         loaded: true
       });
     };
+
     img.onerror = () => {
       this.setState({
         error: true
       });
     };
+
     img.src = this.props.src;
   }
 
@@ -29,7 +32,7 @@ export default class LazyImage extends React.Component {
       return <img
         className={this.props.className}
         style={this.props.style}
-        src={this.props.unloadedSrc}
+        src={this.props.failover}
         alt={this.props.alt}
         height={this.props.height}
         width={this.props.width} />

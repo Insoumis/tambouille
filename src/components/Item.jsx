@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import LazyImage from './LazyImage';
 import css from './Item.scss';
 
-import macron from './assets/macron.jpg';
+import placeholder from './assets/placeholder.jpg';
 
 const Item = ({ history, item }) => {
   let container;
