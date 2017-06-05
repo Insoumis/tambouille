@@ -1,25 +1,7 @@
 .module {
   margin: auto;
-}
-
-.images {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  margin-bottom: 1em;
-
-  & > div {
-    width: 46%;
-    @media (max-width: 768px) {
-      width: 92%;
-    }
-  }
 
   img {
     width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    flex-flow: row wrap;
   }
 }
