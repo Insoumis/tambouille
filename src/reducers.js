@@ -106,7 +106,7 @@ export const filters = {
   },
   7: {
     name: 'Coup|De Bluff',
-    description: "La politique, c’est avant tout un numéro de prestidigitation. Annoncer que l’on va présenter une majorité de candidats issus de la société civile, comme La République en marche, avant d’ajouter tous les élus MoDem. Ou encore, y placer des maires, des conseillers de cabinets ministériels… Après tout, en politique, l’important c’est de savoir faire illusion.",
+    description: "La politique, c’est avant tout la maîtrise de l’illusion. Présenter une majorité de candidats issus de la société civile, avant d’ajouter des élus MoDem. Puis ensuite, placer des maires, des conseillers de cabinets ministériels afin de mieux diluer la tambouille… Après tout en politique, l’important c’est de savoir bluffer.",
     icon: 'ico_bluff',
     catPicture: 'coup.bluff'
   },
