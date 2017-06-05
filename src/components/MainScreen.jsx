@@ -69,8 +69,8 @@ class MainScreen extends Component {
           <div className={css.module}>
             <nav>
               <header id="mainScreen">
-                <h2>Découvrez</h2>
-                <h2>nos tambouilles</h2>
+                <h2>Les tambouilles</h2>
+                <h2>#Législatives2017</h2>
               </header>
               <div className={css.linkContainersWrapper}>
                 <div className={css.linkContainers}>
