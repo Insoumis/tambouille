@@ -83,6 +83,16 @@
 .linkContainersWrapper {
   overflow-x: auto;
   height: 100%;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-image: linear-gradient(to right, rgba($dark, .1) 0, rgba($dark, 1) 80%);
+  }
 }
 
 .ico_cadeau {
