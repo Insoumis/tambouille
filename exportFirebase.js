@@ -18,9 +18,10 @@ const trimFields = (obj) => {
 db.ref().once('value').then((snap) => {
   const candidates = snap.val();
 
-  trimFields(candidate);
 
   Object.values(candidates).forEach((candidate) => {
+
+    trimFields(candidate);
 
     // Special cases
     if (candidate.candidat_name === 'Pierre-Yves Bournazel') {
