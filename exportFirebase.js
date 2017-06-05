@@ -20,6 +20,10 @@ db.ref().once('value').then((snap) => {
 
   Object.values(candidates).forEach((candidate) => {
 
+    if (candidate.category === "7") {
+      candidate.category = "6"
+    }
+
     candidate.candidat_group = undefined;
     candidate.dep_name = undefined;
     if (candidate.descriptionHTML) candidate.description = undefined;

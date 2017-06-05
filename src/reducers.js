@@ -99,15 +99,22 @@ export const filters = {
     catPicture: 'macron.compatibilite'
   },
   6: {
-    name: 'Coup|De Bluff',
-    description: "La politique, c’est avant tout un numéro de prestidigitation. Annoncer que l’on va présenter une majorité de candidats issus de la société civile, comme La République en marche, avant d’ajouter tous les élus MoDem. Ou encore, y placer des maires, des conseillers de cabinets ministériels… Après tout, en politique, l’important c’est de savoir faire illusion.",
-    icon: 'ico_bluff',
-    catPicture: 'coup.bluff'
-  },
-  7: {
     name: '100%|Salades',
     description: "La politique, c’est avant tout avoir le sens de l’innovation. C’est ainsi que certains candidats de La République en marche sont investis en ayant cumulé plus de trois mandats dans leur carrière, malgré les promesses données. Après tout, en politique, l’important c’est le renouvellement.",
     icon: 'ico_salade',
     catPicture: '100.salade'
   },
+  7: {
+    name: 'Coup|De Bluff',
+    description: "À l'image de l'actualité politique, ce site sera mis à jour. Revenez prochainement afin de  découvrir de nouvelles tambouilles politiques dignes de la Ve République.",
+    icon: 'ico_bluff',
+    catPicture: 'coup.bluff'
+  },
+  // TODO: remove or replace current n.7 with this
+  /*7: {
+    name: 'Coup|De Bluff',
+    description: "La politique, c’est avant tout un numéro de prestidigitation. Annoncer que l’on va présenter une majorité de candidats issus de la société civile, comme La République en marche, avant d’ajouter tous les élus MoDem. Ou encore, y placer des maires, des conseillers de cabinets ministériels… Après tout, en politique, l’important c’est de savoir faire illusion.",
+    icon: 'ico_bluff',
+    catPicture: 'coup.bluff'
+  },*/
 };
