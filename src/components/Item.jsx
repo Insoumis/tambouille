@@ -75,7 +75,8 @@ Item.propTypes = {
   }).isRequired,
   item: PropTypes.shape({
     candidat_name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    descriptionHTML: PropTypes.string,
   }).isRequired,
 };
 
