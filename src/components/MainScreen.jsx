@@ -68,12 +68,10 @@ class MainScreen extends Component {
           <SplashScreen />
           <div className={css.module}>
             <nav>
-              <div style={{ position: 'sticky' }}>
-                <header id="mainScreen">
-                  <h2>Découvrez</h2>
-                  <h2>nos tambouilles</h2>
-                </header>
-              </div>
+              <header id="mainScreen">
+                <h2>Découvrez</h2>
+                <h2>nos tambouilles</h2>
+              </header>
               <div className={css.linkContainersWrapper}>
                 <div className={css.linkContainers}>
                   {Object.keys(filters).map(cat => (

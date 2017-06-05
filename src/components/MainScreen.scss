@@ -34,8 +34,7 @@
   nav {
     background: $dark;
     height: 200px;
-    position: sticky;
-    top: -1px;
+    position: relative;
     text-align: center;
     z-index: 100;
 
