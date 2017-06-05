@@ -18,17 +18,22 @@ const trimFields = (obj) => {
 db.ref().once('value').then((snap) => {
   const candidates = snap.val();
 
+  trimFields(candidate);
+
   Object.values(candidates).forEach((candidate) => {
 
-    if (candidate.category === "7") {
-      candidate.category = "6"
+    // Special cases
+    if (candidate.candidat_name === 'Pierre-Yves Bournazel') {
+      candidate.picture = '18-75b.jpg';
+    }
+
+    if (candidate.category === '7') {
+      candidate.category = '6'
     }
 
     candidate.candidat_group = undefined;
     candidate.dep_name = undefined;
     if (candidate.descriptionHTML) candidate.description = undefined;
-
-    trimFields(candidate);
   });
 
   fs.writeFileSync('./src/data.json', JSON.stringify(candidates, null, 2));

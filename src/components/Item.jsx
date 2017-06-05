@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import LazyImage from './LazyImage';
 import css from './Item.scss';
 
+import failover from './assets/placeholder.jpg';
 import placeholder from './assets/placeholder.jpg';
 
 const Item = ({ history, item }) => {
@@ -60,7 +61,10 @@ const Item = ({ history, item }) => {
               <article>
                 <div className={css.imgContainer}>
                   <LazyImage
-                    src={`/assets/${item.circo}-${item.dep_num}.jpg`}
+                    src={item.picture ?
+                      `/assets/${item.picture}` :
+                      `/assets/${item.circo}-${item.dep_num}.jpg`}
+                    failover={failover}
                     alt={item.candidat_name}
                     height="120"
                   />

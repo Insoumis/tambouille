@@ -17,7 +17,9 @@ const ListItem = ({ item, category }) => (
     <article>
       <div className={css.imgContainer}>
         <LazyImage
-          src={`/assets/${item.circo}-${item.dep_num}.jpg`}
+          src={item.picture ?
+            `/assets/${item.picture}` :
+            `/assets/${item.circo}-${item.dep_num}.jpg`}
           failover={failover}
           alt={item.candidat_name}
           height="170"
