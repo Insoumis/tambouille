@@ -47,6 +47,7 @@
 
   p {
     display: inline-block;
+    margin-top: 1em;
     font-size: 0.6em;
     color: $pink;
     max-width: 16em;
@@ -54,8 +55,8 @@
     font-weight: 500;
   }
 
-  p {
-    margin-top: 1em;
+  img {
+    height: 220px;
   }
 }
 
