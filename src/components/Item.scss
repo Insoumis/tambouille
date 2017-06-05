@@ -38,9 +38,11 @@
   &.remove {
     .modal {
       animation: disappear .25s;
+      opacity: 0;
     }
     .background {
       animation: fadeout .25s;
+      opacity: 0;
     }
   }
 }
