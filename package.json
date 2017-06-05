@@ -7,7 +7,7 @@
     "prebuild": "rimraf dist && node exportFirebase.js",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "postbuild": "copyfiles assets/*.jpg dist && copyfiles assets/*.png dist",
-    "surge": "surge -p ./dist -d tambouille.surge.sh",
+    "surge": "surge -p ./dist -d tambouille-electorale.fr",
     "deploy": "npm run build && npm run surge"
   },
   "dependencies": {
