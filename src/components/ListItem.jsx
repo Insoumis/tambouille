@@ -22,7 +22,7 @@ const ListItem = ({ item, category }) => (
           height="170"
         />
       </div>
-      <p>{item.dep_num} - {item.circo}</p>
+      <p>Dpt {item.dep_num} - Circo {item.circo}</p>
       <h3>{item.candidat_name}</h3>
     </article>
   </Link>
