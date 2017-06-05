@@ -33,7 +33,7 @@ const Bluff = () => (
             <p className={css.bold}>
               Sur les 528 candidats directement investis par La République en marche, il y a en réalité 39.69% candidats issus de la société civile et non 52% comme annoncé.</p>
             <p>Nous obtenons ce chiffre si, contrairement à La République en marche, nous n’incluons pas dans nos calculs les conseillers ministériels, les collaborateurs d’élus et les élus locaux.</p>
-            <p>Enfin, si nous nous intéressons à ces 39.69% de candidats issus de la société civile, que constatons-nous ? Qu’il y a 51% de cadres, 24,89 % de chefs d’entreprise, 10% d’avocats ou médecins, très peu d’employés, aucun ouvrier et aucun demandeur d’emploi.</p>
+            <p>Enfin, si nous nous intéressons à ces 39.69% de candidats issus de la société civile, que constatons-nous ? Qu’il y a 51,97% de cadres, 24,89 % de chefs d’entreprise, 10,04% d’avocats ou médecins, très peu d’employés, aucun ouvrier et aucun demandeur d’emploi.</p>
           </article>
         </Col>
       </Row>
