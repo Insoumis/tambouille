@@ -35,24 +35,6 @@ class MainScreen extends Component {
     })
   }
 
-  moveArrow(el) {
-    this.$header = el;
-
-    const $active = el.querySelector(`.${css.active}`);
-    if (!$active) {
-      this.arrow.style.display = 'none';
-      return;
-    }
-
-    const $parent = $active.parentElement;
-    const index = [].indexOf.call($parent.children, $active);
-
-    const fullLeft = ((margin + sizePerLink) * index) + (sizePerLink / 2);
-
-    this.arrow.style.display = 'block';
-    this.arrow.style.left = `${fullLeft}px`;
-  }
-
   render() {
     const padding = 30;
     const margin = 15;
@@ -74,18 +56,22 @@ class MainScreen extends Component {
               </header>
               <div className={css.linkContainersWrapper}>
                 <div className={css.linkContainers}>
-                  {Object.keys(filters).map(cat => (
-                    <NavLink
-                      activeClassName={css.active}
-                      key={cat}
-                      className={css[filters[cat].icon]}
-                      to={`/categories/${cat}`}
-                      onClick={this.scrollToContent}
-                    >{
-                      filters[cat].name.split('|').map((text, i) => (
-                        <span key={i}>{text}<br/></span>
-                    ))}</NavLink>
-                  ))}
+                  {Object.keys(filters).map(cat => {
+                    if (!filters[cat].name) return;
+                    return (
+                      <NavLink
+                        activeClassName={css.active}
+                        key={cat}
+                        className={css[filters[cat].icon]}
+                        to={`/categories/${cat}`}
+                        onClick={this.scrollToContent}
+                      >
+                        {filters[cat].name.split('|').map((text, i) => (
+                          <span key={i}>{text}<br/></span>
+                        ))}
+                      </NavLink>
+                    );
+                  })}
                   <Route path="/" render={() => {
                     if (location.pathname.indexOf('/categories') === 0) {
                       let index = location.pathname.slice('/categories/'.length);
