@@ -1,7 +1,12 @@
 .module {
   margin: auto;
+  color: #213558;
 
   img {
-    width: 100%;
+    max-width: 100%;
+  }
+
+  p {
+    margin-bottom: 1em;
   }
 }
