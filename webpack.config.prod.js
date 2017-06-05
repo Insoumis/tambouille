@@ -129,13 +129,5 @@ module.exports = {
       sourceMap: true,
     }),
     new ExtractTextPlugin('styles.css'),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'tambouille',
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'service-worker.js',
-      minify: true,
-      navigateFallback: config.production.basename + 'index.html',
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-    }),
   ],
 };
