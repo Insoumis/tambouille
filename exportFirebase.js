@@ -23,20 +23,23 @@ db.ref().once('value').then((snap) => {
 
     trimFields(candidate);
 
-    // Special cases
-    if (candidate.candidat_name === 'Pierre-Yves Bournazel') {
+    // Special case: Pierre-Yves Bournazel
+    if (candidate.candidat_name === '5db2bcf5-e9a2-4de3-86f9-fb9a3e8c6d3b') {
       candidate.picture = '18-75b.jpg';
     }
 
+    // Reorder categories
     if (candidate.category === '7') {
       candidate.category = '6'
     }
 
+    // Remove useless data
     candidate.candidat_group = undefined;
     candidate.dep_name = undefined;
     if (candidate.descriptionHTML) candidate.description = undefined;
   });
 
   fs.writeFileSync('./src/data.json', JSON.stringify(candidates, null, 2));
+
   process.exit();
 });
