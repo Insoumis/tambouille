@@ -111,3 +111,9 @@ export const filters = {
     catPicture: 'coup.bluff'
   },
 };
+
+// Preload macaroons
+Object.keys(filters).forEach((category) => {
+  const img = new Image();
+  img.src = `/assets/${filters[category].catPicture}.png`;
+});
