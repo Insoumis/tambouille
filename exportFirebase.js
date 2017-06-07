@@ -18,7 +18,6 @@ const trimFields = (obj) => {
 db.ref().once('value').then((snap) => {
   const candidates = snap.val();
 
-
   Object.entries(candidates).forEach(([id, candidate]) => {
 
     trimFields(candidate);
