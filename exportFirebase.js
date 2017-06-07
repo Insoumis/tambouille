@@ -19,12 +19,12 @@ db.ref().once('value').then((snap) => {
   const candidates = snap.val();
 
 
-  Object.values(candidates).forEach((candidate) => {
+  Object.entries(candidates).forEach(([id, candidate]) => {
 
     trimFields(candidate);
 
     // Special case: Pierre-Yves Bournazel
-    if (candidate.candidat_name === '5db2bcf5-e9a2-4de3-86f9-fb9a3e8c6d3b') {
+    if (id === '5db2bcf5-e9a2-4de3-86f9-fb9a3e8c6d3b') {
       candidate.picture = '18-75b.jpg';
     }
 
