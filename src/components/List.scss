@@ -40,6 +40,47 @@
   margin: 0 auto;
 }
 
+.filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    color: white;
+    background-color: $darkblue;
+    border: none;
+    width: 30%;
+    margin: 0.5%;
+    font-family: inherit;
+    font-weight: 700;
+    height: 38px;
+    border-radius: 35px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    padding-left: 20px;
+    background-image: url('./assets/ico_down.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 20px center;
+
+    @media (max-width: 1023px) {
+      font-size: 12px;
+    }
+    @media (max-width: 767px) {
+      width: 90%;
+    }
+  }
+}
+
 h2.introTitle {
   font-size: 1.6em;
 }

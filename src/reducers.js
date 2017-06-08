@@ -39,8 +39,24 @@ const items = combineReducers({
   allIds,
 });
 
+const visibilityFilters = (state = {}, action) => {
+  switch (action.type) {
+    case 'ADD_FILTER':
+      return { ...state, ...action.payload };
+    case 'RESET_FILTERS':
+    default:
+      return {
+        ...state,
+        candidat_group: 'ALL',
+        dep_name: 'ALL',
+        circo: 'ALL',
+      };
+  }
+}
+
 const app = combineReducers({
   items,
+  visibilityFilters,
 });
 
 export default app;
@@ -62,6 +78,63 @@ export const getAllInCategory = (state, catId = 0) => {
 
   return [];
 };
+
+export const getVisibleInCategory = (state, catId = 0) => {
+  if (
+      state.visibilityFilters.candidat_group === 'ALL' &&
+      state.visibilityFilters.dep_name === 'ALL' &&
+      state.visibilityFilters.circo === 'ALL'
+    ) {
+      return getAllInCategory(state, catId);
+  }
+
+  return getAllInCategory(state, catId).filter((item) => {
+
+    const filters = state.visibilityFilters;
+
+    if (filters.candidat_group !== 'ALL' &&
+        filters.candidat_group !== item.candidat_group) {
+      return false;
+    }
+    if (filters.dep_name !== 'ALL' &&
+        filters.dep_name !== item.dep_name) {
+      return false;
+    }
+    if (filters.circo !== 'ALL' &&
+        filters.circo !== item.circo) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+export const getAvailableFilters = (items) => {
+  const reduced = items.reduce((acc, item) => {
+
+    if (acc.candidat_group.indexOf(item.candidat_group) === -1) {
+      acc.candidat_group.push(item.candidat_group);
+    }
+    if (acc.dep_name.indexOf(item.dep_name) === -1) {
+      acc.dep_name.push(item.dep_name);
+    }
+    if (acc.circo.indexOf(item.circo) === -1) {
+      acc.circo.push(item.circo);
+    }
+
+    return acc;
+  }, {
+    candidat_group: [],
+    dep_name: [],
+    circo: [],
+  });
+
+  reduced.candidat_group.sort();
+  reduced.dep_name.sort();
+  reduced.circo.sort((a, b) => Number(a) - Number(b));
+
+  return reduced;
+}
 
 export const getItem = (state, id) => state.items.byId[id];
 

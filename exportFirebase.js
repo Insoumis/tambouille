@@ -32,9 +32,11 @@ db.ref().once('value').then((snap) => {
       candidate.category = '6'
     }
 
+    if (candidate.candidat_group === 'MODEM') {
+      candidate.candidat_group = 'MoDem';
+    }
+
     // Remove useless data
-    candidate.candidat_group = undefined;
-    candidate.dep_name = undefined;
     if (candidate.descriptionHTML) candidate.description = undefined;
   });
 
