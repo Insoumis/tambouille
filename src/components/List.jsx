@@ -51,34 +51,38 @@ class List extends React.Component {
             </div>
           </div>
         }
-        <div className={css.filters}>
-          <select value={activeFilters.candidat_group} onChange={event => {
-            addFilter({ candidat_group: event.target.value });
-          }}>
-            <option value="ALL">
-              Tous les Partis
-            </option>
-            {visibilityFilters.candidat_group.map((filterValue, i) => (
-              <option key={i} value={filterValue}>{filterValue}</option>
-            ))}
-          </select>
-          <select value={activeFilters.dep_name} onChange={event => {
-            addFilter({ dep_name: event.target.value });
-          }}>
-            <option value="ALL">Tous les départements</option>
-            {visibilityFilters.dep_name.map((filterValue, i) => (
-              <option key={i} value={filterValue}>{filterValue}</option>
-            ))}
-          </select>
-          <select value={activeFilters.circo} onChange={event => {
-            addFilter({ circo: event.target.value });
-          }}>
-            <option value="ALL">Toutes les circonscriptions</option>
-            {visibilityFilters.circo.map((filterValue, i) => (
-              <option key={i} value={filterValue}>{filterValue}</option>
-            ))}
-          </select>
-        </div>
+        {category === "7" ?
+          <Bluff />
+        :
+          <div className={css.filters}>
+            <select value={activeFilters.candidat_group} onChange={event => {
+              addFilter({ candidat_group: event.target.value });
+            }}>
+              <option value="ALL">
+                Tous les Partis
+              </option>
+              {visibilityFilters.candidat_group.map((filterValue, i) => (
+                <option key={i} value={filterValue}>{filterValue}</option>
+              ))}
+            </select>
+            <select value={activeFilters.dep_name} onChange={event => {
+              addFilter({ dep_name: event.target.value });
+            }}>
+              <option value="ALL">Tous les départements</option>
+              {visibilityFilters.dep_name.map((filterValue, i) => (
+                <option key={i} value={filterValue}>{filterValue}</option>
+              ))}
+            </select>
+            <select value={activeFilters.circo} onChange={event => {
+              addFilter({ circo: event.target.value });
+            }}>
+              <option value="ALL">Toutes les circonscriptions</option>
+              {visibilityFilters.circo.map((filterValue, i) => (
+                <option key={i} value={filterValue}>{filterValue}</option>
+              ))}
+            </select>
+          </div>
+        }
         <Row>
           {items.map(item => (
             <Col key={item.id} md={6} lg={3}>
@@ -86,7 +90,6 @@ class List extends React.Component {
             </Col>
           ))}
         </Row>
-        {category === "7" && <Bluff />}
       </Container>
     );
   }
