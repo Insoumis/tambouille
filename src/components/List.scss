@@ -45,7 +45,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 55px;
 
   @media (max-width: 767px) {
     flex-direction: column;
@@ -53,12 +53,12 @@
   }
 
   select {
-    margin-top: 10px;
     color: white;
     background-color: $darkblue;
     border: none;
     width: 30%;
     margin: 0.5%;
+    margin-top: 5px;
     font-family: inherit;
     font-weight: 700;
     height: 38px;
