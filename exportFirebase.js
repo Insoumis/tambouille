@@ -32,6 +32,11 @@ db.ref().once('value').then((snap) => {
       candidate.picture = '1-21b.jpg';
     }
 
+    // Special case: Buon Tan
+    if (id === '6864c90f-f143-48a2-9e2b-4d8073bf8cbd') {
+      candidate.picture = '9-75b.jpg';
+    }
+
     // Reorder categories
     if (candidate.category === '7') {
       candidate.category = '6'
