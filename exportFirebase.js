@@ -27,9 +27,17 @@ db.ref().once('value').then((snap) => {
       candidate.picture = '18-75b.jpg';
     }
 
+    // Special case: Didier Martin
+    if (id === '10053e3c-eac6-4fb6-a6ba-fac765da08d0') {
+      candidate.picture = '1-21b.jpg';
+    }
+
     // Reorder categories
     if (candidate.category === '7') {
       candidate.category = '6'
+    }
+    if (candidate.category === '8') {
+      candidate.category = '7'
     }
 
     if (candidate.candidat_group === 'MODEM') {

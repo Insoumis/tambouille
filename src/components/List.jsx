@@ -27,7 +27,12 @@ class List extends React.Component {
         {category ?
           <div className={css.header}>
             <div className={css.imgContainer}>
-              <img src={`/assets/${filters[category].catPicture}.png`} alt={categoryTitle} width="250" height="250"/>
+              <img
+                src={filters[category].img.src}
+                alt={filters[category].img.alt}
+                width={filters[category].img.width}
+                height={filters[category].img.height}
+              />
             </div>
             <div className={css.content}>
               <h2>{categoryTitle}</h2>
@@ -51,7 +56,7 @@ class List extends React.Component {
             </div>
           </div>
         }
-        {category === "7" ?
+        {category === "8" ?
           <Bluff />
         :
           <div className={css.filters}>

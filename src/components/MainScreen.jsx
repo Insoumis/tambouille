@@ -38,7 +38,7 @@ class MainScreen extends Component {
   render() {
     const padding = 30;
     const margin = 15;
-    const sizePerLink = 100;
+    const sizePerLink = 108;
 
     if (location.pathname.indexOf('/categories') === 0) {
       this.scrollToTitle();

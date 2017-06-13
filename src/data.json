@@ -10,6 +10,17 @@
     "id": "02e611c1-e005-4e94-a14d-42a835381f00",
     "source": "http://bit.ly/2rZlCQk"
   },
+  "0372fac1-058c-4d51-8e8a-a7b867889805": {
+    "candidat_group": "LREM",
+    "candidat_name": "Olivier Serva",
+    "category": "7",
+    "circo": "1",
+    "dep_name": "Guadeloupe",
+    "dep_num": "971",
+    "descriptionHTML": "<p>Olivier Serva, candidat de La République en marche, pour la 1ère circonscription de Guadeloupe a qualifié l’homosexualité « d’abomination » avant de juger le mariage pour tous « intolérable ».</p>",
+    "id": "0372fac1-058c-4d51-8e8a-a7b867889805",
+    "source": "http://www.20minutes.fr/elections/legislatives/2078119-20170531-legislatives-olivier-serva-candidat-marche-homosexualite-abomination"
+  },
   "0464bf11-1aa0-4c8c-9494-bc78120a480f": {
     "candidat_group": "EELV",
     "candidat_name": "Eric Alauzet",
@@ -64,6 +75,18 @@
     "descriptionHTML": "<p>L&#39;ex-ministre George Pau-Langevin a été investie par le Parti Socialiste dans la 15ème circonscription de Paris. </p>\n<p>La République en marche a choisi de n&#39;investir personne face à cette candidate socialiste Macron-compatible.</p>",
     "id": "0fc16fc5-56ee-4e2a-96f2-33d0a07ce3c1",
     "source": "http://www.lemonde.fr/elections-legislatives-2017/article/2017/05/19/une-cinquantaine-de-circonscriptions-sans-candidat-de-la-republique-en-marche_5130188_5076653.html"
+  },
+  "10053e3c-eac6-4fb6-a6ba-fac765da08d0": {
+    "candidat_group": "LREM",
+    "candidat_name": "Didier Martin",
+    "category": "7",
+    "circo": "1",
+    "dep_name": "Côte-d'Or",
+    "dep_num": "21",
+    "descriptionHTML": "<p>Didier Martin, candidat de La République en marche dans la 1ère circonscription de la Côte-d&#39;Or, a été convoqué par la justice dans une affaire de faux témoignages concernant le licenciement de l&#39;ancienne directrice de l&#39;Office du tourisme de Dijon.</p>\n<p>Le mensuel <em>L&#39;Accent Bourguignon</em> a enquêté sur cette histoire et a publié les détails dans un article.</p>",
+    "id": "10053e3c-eac6-4fb6-a6ba-fac765da08d0",
+    "source": "https://www.francebleu.fr/infos/faits-divers-justice/dijon-un-candidat-en-marche-convoque-par-la-police-1496682697",
+    "picture": "1-21b.jpg"
   },
   "10c1a2ee-7b79-411b-a8ba-eb716a1dfe41": {
     "candidat_group": "LREM",
@@ -340,6 +363,17 @@
     "id": "4ed4d1cf-8ac5-4117-84a1-c378fb8fb284",
     "source": "https://image.noelshack.com/fichiers/2017/21/1495707102-18485618-1814705068856135-3183680602792924887-n.jpg"
   },
+  "4facd601-1708-414e-8fb0-fbdc9ce5bdd9": {
+    "candidat_group": "LREM",
+    "candidat_name": "Jean-Louis Touraine",
+    "category": "7",
+    "circo": "3",
+    "dep_name": "Rhône",
+    "dep_num": "69",
+    "descriptionHTML": "<p>Jean-Louis Touraine, député sortant, élu depuis 1989, est le candidat de La République en marche dans la 3ème circonscription du Rhône.</p>\n<p><em>Lyon Capitale</em> écrit dans son mensuel de juin que Jean-Louis Touraine possède une société de « support juridique de gestion de patrimoine immobilier ». Elle a été créée en 1990, mais n’a pas été déclarée à la Haute Autorité pour la transparence de la vie publique (HATVP) en 2014.</p>\n<p>Ce dernier se justifie en disant qu&#39;il ignorait son existence. <em>Rue89</em> rappelle que ce n’est pas la première fois que Jean-Louis Touraine use de l’argument « à l’insu de mon plein gré », puisque ses liens avec une société installée dans les Bermudes l’avaient rattrapé, il y a quelques années.</p>",
+    "id": "4facd601-1708-414e-8fb0-fbdc9ce5bdd9",
+    "source": "http://www.rue89lyon.fr/2017/06/09/3e-circo-rhone-jean-louis-touraine-orbite-parangon-non-renouvellement-politique/"
+  },
   "54b0d095-7047-4f18-ba5d-8a10196b6e83": {
     "candidat_group": "LREM",
     "candidat_name": "Claire Pommeyrol Burlet",
@@ -372,6 +406,17 @@
     "descriptionHTML": "<p>Valérie Corre est la candidate investie par le Parti Socialiste dans la 6ème circonscription du Loiret. </p>\n<p>Si elle est élue, la candidate socialiste veut rejoindre la majorité présidentielle. </p>\n<p>Elle aurait préféré pouvoir se présenter avec une double appartenance, mais s&#39;est ravisée, car ce « n’était pas crédible ».</p>",
     "id": "5a447447-1943-45a5-9cf2-7c47dec5e91f",
     "source": "http://www.magcentre.fr/128569-valerie-corre-sort-ses-dix-commandements-pour-la-moralisation-de-la-vie-politique/"
+  },
+  "5ce52a97-f0cc-4c7d-995e-49c7c85b6fbb": {
+    "candidat_group": "LREM",
+    "candidat_name": "Marielle de Sarnez",
+    "category": "7",
+    "circo": "11",
+    "dep_name": "Paris",
+    "dep_num": "75",
+    "descriptionHTML": "<p>Marielle de Sarnez, actuelle ministre des affaires européennes et candidate de La République en marche dans la 11ème circonscription de Paris est visée par une enquête préliminaire pour des soupçons d&#39;emplois fictifs.</p>\n<p>Le parquet de Paris a ouvert une enquête préliminaire sur des soupçons d&#39;emplois fictifs visant les assistants de 19 eurodéputés, dont la ministre.</p>",
+    "id": "5ce52a97-f0cc-4c7d-995e-49c7c85b6fbb",
+    "source": "http://www.europe1.fr/societe/cinq-questions-sur-laffaire-marielle-de-sarnez-3346058"
   },
   "5d73c2aa-a9ea-4799-a3f7-cd184e6184ab": {
     "candidat_group": "PS",
@@ -440,6 +485,17 @@
     "id": "603f1946-7f96-4970-a254-cc98c3826e2f",
     "source": "https://www.marianne.net/politique/legislatives-voici-les-51-circonscriptions-sans-candidat-en-marche-pour-macron"
   },
+  "6078f2c2-dba1-4a6e-99d8-dfeabe431cdb": {
+    "candidat_group": "LREM",
+    "candidat_name": "Alain Tourret",
+    "category": "7",
+    "circo": "6",
+    "dep_name": "Calvados",
+    "dep_num": "16",
+    "descriptionHTML": "<p>Alain Tourret, candidat de La République en marche dans la 6ème circonscription du Calvados, a, selon <em>Mediapart</em>, utilisé son indemnité de frais de mandat à des fins personnelles.</p>",
+    "id": "6078f2c2-dba1-4a6e-99d8-dfeabe431cdb",
+    "source": "http://www.lexpress.fr/actualite/politique/le-depute-tourret-investi-par-rem-aurait-abuse-de-son-indemnite-selon-mediapart_1911485.html"
+  },
   "60fb4fd9-9631-4bdf-9e6e-90684071547a": {
     "candidat_group": "PS",
     "candidat_name": "Fabrice Dassie",
@@ -461,6 +517,17 @@
     "descriptionHTML": "<p>Nicolas Brien candidat Macron-compatible, investi par le PS dans la 2ème circonscription de l&#39;Allier, avait voté pour Macron au premier et au second tour. </p>\n<p>Il n&#39;a pas été retenu par le mouvement « La République en marche » pour en être son candidat.</p>",
     "id": "646a7925-e0ca-4f27-b11d-667d8d44edd2",
     "source": "https://www.lasemainedelallier.fr/2017/05/11/legislatives-nicolas-brien-repond-a-sa-non-investiture-par-en-marche/"
+  },
+  "6864c90f-f143-48a2-9e2b-4d8073bf8cbd": {
+    "candidat_group": "LREM",
+    "candidat_name": "Buon Tan",
+    "category": "7",
+    "circo": "9",
+    "dep_name": "Paris",
+    "dep_num": "75",
+    "descriptionHTML": "<p>Buon Tan, candidat de La République en marche dans la 9ème circonscription de Paris, est visé par une plainte pour détournements de fonds.</p>",
+    "id": "6864c90f-f143-48a2-9e2b-4d8073bf8cbd",
+    "source": "http://www.leparisien.fr/faits-divers/paris-un-candidat-en-marche-vise-par-une-plainte-pour-detournements-de-fonds-08-06-2017-7028838.php"
   },
   "6debf924-399a-4e0d-bf92-5b6f0eee28ec": {
     "candidat_group": "PS",
@@ -528,6 +595,17 @@
     "id": "77d439bb-447e-4d49-9475-9f2fd380f1a7",
     "source": "http://mobile.lemonde.fr/elections-legislatives-2017/article/2017/05/19/une-cinquantaine-de-circonscriptions-sans-candidat-de-la-republique-en-marche_5130188_5076653.html"
   },
+  "7a67e1bd-084b-4fd3-b17f-197e6ca9eeab": {
+    "candidat_group": "LREM",
+    "candidat_name": "Véronique Avril",
+    "category": "7",
+    "circo": "2",
+    "dep_name": "Seine-Saint-Denis",
+    "dep_num": "93",
+    "descriptionHTML": "<p>Dans la deuxième circonscription de Seine-Saint-Denis, se présente, pour La République en marche, Véronique Avril. Elle a, selon <em>Mediapart</em>, acheté, puis loué pendant 5 ans, un appartement dans un immeuble insalubre, à un prix exorbitant.</p>",
+    "id": "7a67e1bd-084b-4fd3-b17f-197e6ca9eeab",
+    "source": "http://www.20minutes.fr/elections/2076843-20170530-legislatives-candidate-marche-accusee-avoir-loue-logement-insalubre"
+  },
   "7b8cf8f9-f55e-4bf4-972a-8abb0cdccb76": {
     "candidat_group": "LREM",
     "candidat_name": "Isabelle Boscher",
@@ -571,6 +649,17 @@
     "descriptionHTML": "<p>Sophie Errante, députée socialiste sortante, est aujourd’hui candidate de La République en marche dans la 10ème circonscription de Loire-Atlantique.</p>\n<p>Le Parti Socialiste ne présente pas de candidat face à cet ex-socialiste. Cette circonscription a été promise à EELV par le PS suite au ralliement de Yannick Jadot à Benoît Hamon.</p>\n<p>À ce sujet, la députée EELV sortante Danielle Auroi a déclaré dans <em>Le Parisien</em> : « C’était couru d’avance. Cambadélis envoie les partenaires à la casse pour avantager Macron. On comprend pourquoi le PS n’a pas condamné ceux partis à En Marche! » </p>",
     "id": "7f3bfb56-8347-4739-b25b-7ee85ff5e1ca",
     "source": "http://m.leparisien.fr/elections/legislatives/legislatives-les-petits-arrangements-du-ps-qui-menagent-en-marche-16-04-2017-6859842.php"
+  },
+  "7ff21601-72ac-46aa-96fe-db1256368e4e": {
+    "candidat_group": "LREM",
+    "candidat_name": "Richard Ferrand",
+    "category": "7",
+    "circo": "6",
+    "dep_name": "Finistère",
+    "dep_num": "29",
+    "descriptionHTML": "<p>Richard Ferrand, actuel ministre et candidat de La République en marche dans la 6ème circonscription du Finistère, déjà soupçonné dans une affaire immobilière qui a conduit à l&#39;ouverture d&#39;une enquête préliminaire, serait impliqué dans une autre opération qui pose question.</p>\n<p>En effet, selon <em>Mediapart</em>, le ministre a revendu, en 2016, un bout de sa permanence au PS local, alors qu&#39;il rejoint LREM. La question se pose de savoir s’il l’avait acquise avec des fonds publics. </p>",
+    "id": "7ff21601-72ac-46aa-96fe-db1256368e4e",
+    "source": "http://www.leprogres.fr/france-monde/2017/06/13/une-nouvelle-affaire-pour-richard-ferrand"
   },
   "8aa70724-9550-4969-a758-e74a303d10c2": {
     "candidat_group": "PS",
@@ -637,6 +726,17 @@
     "descriptionHTML": "<p>Juliette Meadel, ex-secrétaire d&#39;État chargée de l&#39;Aide aux victimes, est la candidate du Parti Socialiste dans la 10ème circonscription de Seine-et-Marne. </p>\n<p>Elle s&#39;est ralliée à Emmanuel Macron dès le premier tour et a soutenu, à plusieurs reprises, l&#39;actuel gouvernement. </p>\n<p>Elle interprète les 65% du 2nd Tour d&#39;Emmanuel Macron comme un « blanc-seing » pour réformer le Code du travail à coups d&#39;ordonnances.</p>",
     "id": "93b456a0-74be-4c11-ab1c-f2e85d52d19f",
     "source": "http://lelab.europe1.fr/video-pour-meadel-les-66-de-francais-qui-ont-vote-pour-macron-sont-pour-reformer-le-code-du-travail-par-ordonnances-3323603"
+  },
+  "984e769c-390b-4354-8155-f568b4bfce3d": {
+    "candidat_group": "LREM",
+    "candidat_name": "Bruno Bonnell",
+    "category": "7",
+    "circo": "6",
+    "dep_name": "Rhône",
+    "dep_num": "69",
+    "descriptionHTML": "<p>Bruno Bonnell est le candidat de La République en marche dans la 6ème circonscription du Rhône. <em>Mediapart</em> est revenu sur les pratiques peu reluisantes de l&#39;ancien patron d&#39;Infogrames.</p>\n<p>Il a été condamné pour sa gestion d&#39;entreprise. <em>Mediapart</em> montre aussi comment ce candidat aurait, par un montage, évité de payer l&#39;ISF et l&#39;impôt sur le revenu. Bruno Bonnell serait aussi propriétaire de deux sociétés basées au Delaware, un paradis fiscal américain.</p>",
+    "id": "984e769c-390b-4354-8155-f568b4bfce3d",
+    "source": "http://www.francetvinfo.fr/elections/bruno-bonnell-candidat-d-en-marche-dans-le-rhone-accuse-d-optimisation-fiscale-par-mediapart_2226431.html"
   },
   "9c7b9cc2-ccbb-448b-bcbe-fda4ac05be64": {
     "candidat_group": "PS",
@@ -737,6 +837,17 @@
     "id": "ae9a6c87-f730-4bb5-9d5b-1ea77c71fafe",
     "source": "https://www.facebook.com/emmanuel.provin/posts/10155342288594413"
   },
+  "aee44c11-11e6-42e4-8a39-56a6fd7e4cfa": {
+    "candidat_group": "LREM",
+    "candidat_name": "Stéphanie Jannin",
+    "category": "7",
+    "circo": "2",
+    "dep_name": "Hérault",
+    "dep_num": "34",
+    "descriptionHTML": "<p>Stéphanie Jannin, candidate de La République en marche dans la 2ème circonscription de l&#39;Hérault, est visée par une enquête pour prise illégale d&#39;intérêts concernant un chantier de logements sociaux. </p>\n<p>Elle sera jugée en correctionnelle, en septembre, car elle est soupçonnée de « prise illégale d&#39;intérêts » après avoir voté des subventions destinées à l&#39;association de son mari, ainsi qu&#39;un avenant à un marché pour son ancienne société, en conseil municipal. </p>",
+    "id": "aee44c11-11e6-42e4-8a39-56a6fd7e4cfa",
+    "source": "http://www.bfmtv.com/politique/la-candidate-lrem-stephanie-jannin-sera-jugee-en-correctionnelle-pour-prise-illegale-d-interet-1183000.html"
+  },
   "b13bacb7-04ed-4fc5-81f6-45b6493fdda4": {
     "candidat_group": "LREM",
     "candidat_name": "Philip Vivier",
@@ -813,17 +924,6 @@
     "descriptionHTML": "<p>Bertrand Petit, candidat du Parti Socialiste dans la 8ème circonscription du Pas-de-Calais, s’était déclaré « Macron-compatible » dès la primaire du Parti Socialiste. </p>\n<p>Il a ajouté qu&#39;il préférait Emmanuel Macron à Benoît Hamon. </p>",
     "id": "bb870c0a-5a3e-4610-b097-e62f799580f9",
     "source": "http://www.lindependant.net/elections-legislatives-un-candidat-en-marche-face-a-bertrand-petit-2/"
-  },
-  "c59d3286-2e1d-403a-8315-5595ea695e8b": {
-    "candidat_group": "PRG",
-    "candidat_name": "Joël Giraud",
-    "category": "1",
-    "circo": "2",
-    "dep_name": "Hautes-Alpes",
-    "dep_num": "5",
-    "descriptionHTML": "<p>Le candidat Joël Giraud (PRG) a parrainé Emmanuel Macron pour les élections présidentielles, il obtient donc le soutien de LREM pour les législatives : La République en marche a décidé de ne présenter aucun candidat face à lui, alors même que ce dernier ne respecte pas la règle de non-cumul des mandats dans le temps fixée par LREM.</p>\n<p>De plus, Joël Giraud a AUSSI le soutien du Parti Socialiste, qui l&#39;a toujours soutenu et ne présentera pas de candidat face à lui. </p>",
-    "id": "c59d3286-2e1d-403a-8315-5595ea695e8b",
-    "source": "http://mobile.lemonde.fr/elections-legislatives-2017/article/2017/05/19/une-cinquantaine-de-circonscriptions-sans-candidat-de-la-republique-en-marche_5130188_5076653.html"
   },
   "c6bb245b-a720-4df5-abd5-2d3f6183e4a9": {
     "candidat_group": "LREM",
@@ -945,6 +1045,17 @@
     "descriptionHTML": "<p>Le Parti Socialiste ne présente pas de candidat face à la députée sortante PS Monique Orphé, aujourd&#39;hui investie par La République en marche. </p>\n<p>Elle figurait auparavant dans la liste des investis du Parti Socialiste avant la dernière mise à jour. </p>",
     "id": "d29b3e4a-0f6a-4561-b976-f30c6b84649f",
     "source": "http://www.parti-socialiste.fr/liste-candidats-aux-legislatives-investis-ps/"
+  },
+  "d6061876-8401-42b1-b477-57f6cb83e21c": {
+    "candidat_group": "LREM",
+    "candidat_name": "Houmria Berrada",
+    "category": "7",
+    "circo": "2",
+    "dep_name": "Nord",
+    "dep_num": "59",
+    "descriptionHTML": "<p>Houmria Berrada est la candidate dans la 2ème circonscription du Nord.</p>\n<p><em>La Voix du Nord</em> révèle qu&#39;elle a été condamnée en 2011 pour falsification de diplôme.</p>",
+    "id": "d6061876-8401-42b1-b477-57f6cb83e21c",
+    "source": "http://www.lepoint.fr/legislatives/nord-une-candidate-en-marche-condamnee-pour-falsification-de-diplome-31-05-2017-2131658_3408.php"
   },
   "d791f8b2-c753-4471-baec-a3489dd260dc": {
     "candidat_group": "PS",
@@ -1077,6 +1188,17 @@
     "descriptionHTML": "<p>Guillaume Garot, candidat du Parti Socialiste dans la 1ère circonscription de Mayenne, ne s&#39;inscrit pas dans une opposition. </p>\n<p>Le soir de la victoire d’Emmanuel Macron, il tweetait : « Je souhaite la réussite du nouveau Président, et m’engagerai pour une majorité de progrès. »</p>",
     "id": "ec6e7d32-66f0-40a5-8adc-aa0b0bba6f31",
     "source": "http://leglob-journal.fr/Legislatives-Guillaume-Garot"
+  },
+  "ed04e0b1-f7be-4581-9713-125e0f87ecdc": {
+    "candidat_group": "LREM",
+    "candidat_name": "Pierre Cabaré",
+    "category": "7",
+    "circo": "1",
+    "dep_name": "Haute-Garonne",
+    "dep_num": "31",
+    "descriptionHTML": "<p>Pierre Cabaré est le candidat investi par La République en marche dans la 1ère circonscription de Haute-Garonne. </p>\n<p>LREM a investi ce candidat alors qu&#39;il a été condamné en 2003 à un an d&#39;inégibilité à cause de sa gestion de son compte de campagne lorsqu’il était candidat divers droite aux élections législatives de 2002.</p>\n<p>La commission d’investiture du mouvement avait pourtant prétendu ne pas présenter de candidats ayant, entre autres, une peine d’inéligibilité. La candidature de Pierre Cabaré n&#39;a pas été retiré et il est aujourd&#39;hui au second tour des élections législatives.</p>",
+    "id": "ed04e0b1-f7be-4581-9713-125e0f87ecdc",
+    "source": "http://www.bfmtv.com/politique/legislatives-un-candidat-lrem-avait-ete-condamne-a-une-peine-d-ineligibilite-1174317.html"
   },
   "ed148c11-c21b-4759-bc54-6d26e6cb74db": {
     "candidat_group": "PS",

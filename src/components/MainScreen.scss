@@ -44,7 +44,7 @@
       font-weight: 600;
       height: 95px;
       background-size: 90px;
-      width: 100px;
+      width: 108px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -115,6 +115,9 @@
 }
 .ico_salade {
   background: url('./assets/ico_salade.svg') no-repeat center;
+}
+.ico_affaires {
+  background: url('./assets/ico_affaires.svg') no-repeat center;
 }
 
 .content {
