@@ -3,6 +3,6 @@ module.exports = {
     basename: '/',
   },
   production: {
-    basename: '',
+    basename: '/',
   },
 };
