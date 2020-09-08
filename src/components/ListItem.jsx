@@ -2,13 +2,31 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import LazyImage from './LazyImage';
 import css from './ListItem.scss';
 
-const ListItem = ({ item }) => (
-  <Link className={css.module} to={`/candidats/${item.id}`}>
+import failover from './assets/placeholder.jpg';
+
+const ListItem = ({ item, category }) => (
+  <Link
+    className={css.module}
+    to={category ?
+      `/categories/${category}/${item.id}` :
+      `/candidat/${item.id}`}
+  >
     <article>
+      <div className={css.imgContainer}>
+        <LazyImage
+          src={item.picture ?
+            `/assets/${item.picture}` :
+            `/assets/${item.circo}-${item.dep_num}.jpg`}
+          failover={failover}
+          alt={item.candidat_name}
+          height="170"
+        />
+      </div>
+      <p>Dpt {item.dep_num} - Circo {item.circo}</p>
       <h3>{item.candidat_name}</h3>
-      <p>{item.dep_num} - {item.dep_name} - circonscription n°{item.circo}</p>
     </article>
   </Link>
 );

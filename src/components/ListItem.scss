@@ -6,13 +6,66 @@
   }
 
   article {
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.12);
     color: $main;
-    height: 200px;
+    height: 230px;
     margin-top: 30px;
     padding: 20px;
     text-align: center;
+
+    p {
+      background-color: $pink;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 auto;
+      width: 140px;
+    }
+
+    h3 {
+      display: inline;
+      color: #fff;
+      background-color: $darkblue;
+      box-shadow: 5px 0 0 $darkblue, -5px 0 0 $darkblue;
+    }
+  }
+}
+
+.imgContainer {
+  width: 170px;
+  height: 170px;
+
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.hasRightPseudo {
+  &:after {
+    background-color: $darkblue;
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    right: -5px;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.hasLeftPseudo {
+  &:before {
+    background-color: $darkblue;
+    content: ' ';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    left: -5px;
+    top: 0;
+    z-index: 1;
   }
 }

@@ -1,39 +1,84 @@
 @import './assets/colors';
 
 .module {
-  background: lighten($dark, 10%);
-  display: table;
-  height: 100vh;
-  position: relative;
+  background-image: radial-gradient(
+    circle farthest-corner at center,
+    white 0%,
+    $lightblue 75%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
+  color: $darkblue;
+  font-size: 2em;
+  line-height: 1.8em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
-  button {
-    background: url('./assets/ico-down.svg') no-repeat center;
-    border: 0;
-    height: 60px;
-    margin-top: 30px;
-    text-indent: -9999px;
-    width: 60px;
+  h1 {
+    color: $darkblue;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  h2 {
+    color: $darkblue;
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+
+  h3 {
+    margin-bottom: .6em;
+    font-size: 0.9em;
+    line-height: 1em;
+    padding: 3px 8px;
+    transform: rotate(3deg);
+    background: $pink;
+    display: inline-block;
+    color: white;
+    margin-top: -1.4em;
+    text-transform: uppercase;
+  }
+
+  p {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 0.6em;
+    color: $pink;
+    max-width: 16em;
+    line-height: 1.4em;
+    font-weight: 500;
+  }
+
+  img {
+    height: 220px;
   }
 }
 
-.wrapper {
-  color: $light;
-  display: table-cell;
-  font-family: Domine, serif;
-  font-size: 2em;
-  line-height: 1.8em;
-  text-align: center;
-  vertical-align: middle;
+.logo {
+  height: 220px;
 
-  img {width: 250px;}
+  @media (max-width: 768px) {
+    height: 165px;
+  }
+}
 
-  h1 {
-    color: $light;
-    font-size: 2.2em;
-    line-height: 1.8em;
-    text-shadow: 5px 5px $dark;
+@media (max-width: 768px) {
+  .module img {
+    width: 300px;
+    height: 165px;
   }
 
-  p {font-size: 0.6em;}
+  .module h1 {
+    font-size: 1.6em;
+  }
+
+  .module h2 {
+    font-size: 1.4em;
+  }
 }

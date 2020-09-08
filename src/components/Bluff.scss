@@ -1,0 +1,51 @@
+@import './assets/colors';
+
+.module {
+  margin: auto;
+  color: $darkblue;
+
+  @media (max-width: 991px) {
+      margin-top: 72px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h3 {
+    color: $pink;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.bold {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.images {
+  margin-left: -15px;
+  @media (max-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+article.secondParagraph {
+  margin-top: 34px;
+
+  @media (max-width: 1199px) {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+}
